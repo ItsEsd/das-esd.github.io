@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*!
-* Start Bootstrap - Resume v6.0.2 (https://startbootstrap.com/theme/resume)
+* Start Bootstrap - dpro v6.0.2 (https://startbootstrap.com/theme/dpro)
 * Copyright 2013-2020 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-dpro/blob/master/LICENSE)
 */
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -6303,7 +6303,10 @@ button.bg-dark:focus {
 .d-block {
   display: block !important;
 }
-
+.d-block img{
+  width:40px;
+  padding-right:10px;
+}
 .d-table {
   display: table !important;
 }
@@ -6592,6 +6595,7 @@ button.bg-dark:focus {
 
 .flex-shrink-0 {
   flex-shrink: 0 !important;
+  padding-top:20px;
 }
 
 .flex-shrink-1 {
@@ -10086,7 +10090,7 @@ p.lead {
   font-size: 3rem;
 }
 
-section.resume-section {
+section.dpro-section {
   display: flex;
   align-items: center;
   padding-left: 1rem;
@@ -10095,17 +10099,18 @@ section.resume-section {
   padding-bottom: 5rem;
   max-width: 75rem;
 }
-section.resume-section .resume-section-content {
+section.dpro-section .dpro-section-content {
   width: 100%;
+  
 }
 
 @media (min-width: 768px) {
-  section.resume-section {
+  section.dpro-section {
     min-height: 100vh;
   }
 }
 @media (min-width: 992px) {
-  section.resume-section {
+  section.dpro-section {
     padding-left: 3rem;
     padding-right: 3rem;
     padding-top: 5rem;
@@ -10117,10 +10122,11 @@ body,html{
   width:100%;
   overflow-x:hidden;
   overscroll-behavior-x: none;
+  background-color: #000;
 }
 
 #dasesd,#mastrowall,#mwfbiz,#dsonic,#reviews{
-  display: none;
+  display: block;
 }
 
 #signbtn{
@@ -10138,4 +10144,15 @@ body,html{
   border-radius: 10px;
   background-color: #242424;
   display: none;
+}
+.social-icons a{
+  margin-bottom:5px;
+}
+
+.icons a{
+  margin-bottom:5px;
+}
+.hr-dpro-sec{
+  border-color:grey;
+  border-width:2px;
 }
