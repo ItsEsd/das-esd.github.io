@@ -10126,7 +10126,7 @@ body,html{
 }
 
 #dasesd,#mastrowall,#mwfbiz,#dsonic,#reviews{
-  display: block;
+  display: none;
 }
 
 #signbtn{
@@ -10155,4 +10155,5 @@ body,html{
 .hr-dpro-sec{
   border-color:grey;
   border-width:2px;
+   margin: 0 !important;
 }
