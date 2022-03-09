@@ -10122,7 +10122,7 @@ body,html{
   width:100%;
   overflow-x:hidden;
   overscroll-behavior-x: none;
-  background-color: #000;
+  background-color: #e6e6e6;
 }
 
 #dasesd,#mastrowall,#mwfbiz,#dsonic,#reviews{
@@ -10155,5 +10155,5 @@ body,html{
 .hr-dpro-sec{
   border-color:grey;
   border-width:2px;
-   margin: 0 !important;
+  margin: 0 !important;
 }
