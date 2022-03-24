@@ -1,0 +1,82 @@
+<head>
+    <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.jpg" />
+    <base target="_blank">
+    <title>Bit Edit - Property of mwfbiz.COM</title>
+    <style>
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background-color: #e6e6e6;
+      height:100%;
+    }
+    #demon{
+      width:100%;
+      height:300px;
+      overflow-y:scroll;
+      border:2px solid grey;
+      max-width:800px;
+      background-color: white;
+    }
+    
+    #txt{
+      line-height:20px;
+      height:200px;
+      overflow-y:scroll;
+      width:100%;
+      max-width:800px;
+      margin-top:10px; 
+      background-color: white;
+      border-radius:4px;
+    }
+    
+    #basehtm{
+      width:98%;
+      margin-bottom:10px;
+      max-width:800px; 
+      background-color: white;
+      padding:4px;
+      border-radius:4px;
+
+    }
+    #mailto{
+        font-size: 12px;
+    }
+    #titlepg{
+      text-align:left;
+      max-width:800px;
+      padding-top:20px;
+      color:rgba(0, 0, 0, 0.664);
+    }
+    </style>
+    <head>
+    <body>
+    <center>
+    <h3 id="titlepg">|| Bit Edit - Property of mwfbiz.COM</h3>
+    <input id="basehtm" placeholder="Copy / Paste Elem.."/>
+    <div id="demon"></div>
+    <textarea id="txt" placeholder="Edit.."></textarea>
+     <br><br>
+    <a href="mailto:info@mwfbiz.com" id="mailto">info@mwfbiz.com</a>    
+</center>
+    <script>
+    var inhtm = document.getElementById('basehtm');
+    inhtm.addEventListener('input',showconhtm);
+    function showconhtm(){
+    var k = inhtm.value;
+    var r = unescape(window.atob(k));
+    document.getElementById('demon').innerHTML = r;
+    document.getElementById('txt').value = r;
+    }
+    
+    var outhtm = document.getElementById('txt');
+    
+    outhtm.addEventListener('input',showouthtm);
+    function showouthtm(){
+    var m = outhtm.value;
+    var b = escape(window.btoa(m));
+    document.getElementById('demon').innerHTML = m;
+    document.getElementById('basehtm').value = b;
+    }
+    
+    </script>
+    </body>
