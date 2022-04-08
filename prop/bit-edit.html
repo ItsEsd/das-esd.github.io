@@ -51,22 +51,23 @@
 
     }
     #mailto{
-      margin-left:4px;
+        bottom:10px;
+        left:10px;
+        position: fixed;
         font-size: 12px;
-        line-height: 20px;
-        padding-top:20px;
-        float: left;
         text-align: left;
         margin-bottom: 0px;
         padding-bottom: 0px;
     }
+
     #showcted{
-bottom:10px;
-right:10px;
-position: fixed;
-font-size: 14px;
-padding:4px 14px;
+   bottom:10px;
+   right:10px;
+   position: fixed;
+   font-size: 14px;
+   padding:4px 14px;
     }
+
     #titlepg{
       text-align:left;
       max-width:680px;
@@ -83,9 +84,10 @@ padding:4px 14px;
     <div id="demon" contenteditable="true"></div>
     <textarea id="txt" type="text" placeholder="Edit.."></textarea>
     <button class="btn btn-dark" id="showcted">Custom Edit</button>
-    <p id="mailto"><a href="mailto:info@mwfbiz.com">info@mwfbiz.com</a><br>
-      <a href="https://mwfbiz.com/" >mwfbiz.COM</a>
-    </p>   
+    <span id="mailto">
+      <a href="https://mwfbiz.com/" >mwfbiz.COM</a><br/>
+      <a href="mailto:info@mwfbiz.com">info@mwfbiz.com</a>
+    </span> 
 </center> 
     <script>
     var inhtm = document.getElementById('basehtm');
