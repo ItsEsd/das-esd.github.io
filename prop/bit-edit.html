@@ -51,10 +51,14 @@
 
     }
     #mailto{
+      margin-left:4px;
         font-size: 12px;
-        float:left;
-        margin-left:10px;
+        line-height: 20px;
+        padding-top:20px;
+        float: left;
         text-align: left;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
     }
     #showcted{
 bottom:10px;
@@ -78,11 +82,11 @@ padding:4px 14px;
     <input id="basehtm" placeholder="Copy / Paste Elem.."/>
     <div id="demon" contenteditable="true"></div>
     <textarea id="txt" type="text" placeholder="Edit.."></textarea>
-     <br><button class="btn btn-dark" id="showcted">Custom Edit</button>
+    <button class="btn btn-dark" id="showcted">Custom Edit</button>
     <p id="mailto"><a href="mailto:info@mwfbiz.com">info@mwfbiz.com</a><br>
       <a href="https://mwfbiz.com/" >mwfbiz.COM</a>
-    </p>    
-</center>
+    </p>   
+</center> 
     <script>
     var inhtm = document.getElementById('basehtm');
     inhtm.addEventListener('input',showconhtm);
@@ -93,8 +97,7 @@ padding:4px 14px;
     document.getElementById('txt').value = r;
     }
     
-    var outhtm = document.getElementById('demon');
-    
+    var outhtm = document.getElementById('demon');   
     outhtm.addEventListener('input',showouthtm);
     function showouthtm(){
     var m = outhtm.innerHTML;
@@ -104,7 +107,6 @@ padding:4px 14px;
     }
     
     var custhtm = document.getElementById('txt');
-    
     custhtm.addEventListener('input',customouthtm);
     function customouthtm(){
     var mtw = custhtm.value;
