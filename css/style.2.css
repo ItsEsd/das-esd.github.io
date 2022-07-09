@@ -5,7 +5,8 @@ position: fixed;
 padding:6px;
 background-color: #181818;
 border-radius: 5px;
-display: none;
+display: block;
+z-index: 1;
 }
 
 #newsmag svg{
@@ -55,4 +56,62 @@ cursor: pointer;
 #quicknews a{
     margin:4px;
     font-size: 14px;
+}
+.navbar-subitem a{
+    color:#ffffffa6;
+    text-align: left;
+}
+.navbar-subitem{
+    text-align: left;
+}
+
+.nav-subitem a{
+color:#ffffffb7;
+}
+.nav-subitem {
+    text-align: center;
+}
+.nav-conas{
+    font-family: 'Courier New', Courier, monospace;
+    bottom:0px;
+    right:20px;
+    position: absolute;
+    cursor: pointer;
+}
+.nav-conas:hover{
+right:10px;
+}
+
+#conconas{
+    top:0px;
+    position: fixed;
+    display: block;
+    background-color: rgba(24, 23, 23, 0.678);
+    height:100%;
+    width: 100%;
+    overflow-y:auto;
+    display: none;
+    z-index: 8000;
+  }
+
+  #conconas div{
+    max-width: 800px;
+    background-color: white;
+  }
+  
+#dasesd,#mastrowall,#mwfbiz,#dsonic,#reviews{
+  display: block;
+}
+
+
+#signdiv{
+  padding:5px;
+  bottom:20px;
+  right:20px;
+  position: fixed;
+  width:240px;
+  border-radius: 5px;
+  background-color: #242424;
+  display: none;
+  z-index: 100;
 }
