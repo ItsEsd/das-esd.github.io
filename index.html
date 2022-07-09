@@ -20,16 +20,26 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav"> <a class="navbar-brand js-scroll-trigger" href="#page-top"> <span class="d-block d-lg-none"><img src="assets/img/favicon.jpg" />Soubhik Das @itsEsD</span> <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span> </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#dasesd">@itsEsD</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mwfbiz">M W F BIZ</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mastrowall">MASTROWALL</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#dsonic">DSonic</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#reviews">Who am i?</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">A b o u t</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#dasesd">@ i t s E s D</a></li>
+          <ul class="navbar-subitem">
+            <li><a href="#">- B Talk</a></li>
+          <li><a  href="#">- DQuote E</a></li>
+        </ul>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mwfbiz">P r o j e c t s</a></li>
+          <ul class="navbar-subitem">
+            <li><a href="https://mwfbiz.com">mwfbiz.COM</a></li>
+            <li><a href="https://mastrowall.com">mAstroWall</a></li>
+          </ul>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#dsonic">D S o n i c </a></li>
+          <li class="nav-subitem"><a href="#">- Gallery</a></li>
+          <li class="nav-subitem"><a href="#">- Video</a></li>
+          <li class="nav-subitem"><a href="#">- Audio</a></li>
+          <ul class="nav-conas" id="signbtn">Continue As >></ul>
         </ul>
       </div>
     </nav>
-    <div id="signdiv" align="center"> <input id="justpass" class="form-control" type="password" placeholder="Your Key : **********" style="text-align: center;" required /> </div> <button class="btn btn-primary" id="signbtn">Hi</button>
+    <div id="signdiv" align="center"> <input id="justpass" class="form-control" type="password" placeholder="Your Key : **********" style="text-align: center;" required /> </div>
     <div class="container-fluid p-0">
       <section class="dpro-section" id="about">
         <div class="dpro-section-content">
@@ -41,6 +51,7 @@
       </section>
       <hr class="hr-dpro-sec" />
       <div ng-include="'divsec/funda.html'"></div>
+      <div id="conconas"><div ng-include="'divsec/conas.html'"></div></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
