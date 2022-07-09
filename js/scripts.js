@@ -44,19 +44,13 @@
 
 $('#signbtn').click(function(){
     $('#signdiv').toggle('fast');
-    $('#signbtn').toggle('fast');
+    $('#conconas').hide();
 });
 
 $('#justpass').on('input',function(){
     var jstp = $('#justpass').val();
     if(jstp=="19906"){
         $('#signdiv').hide();
-        $('#signbtn').hide();
-        $('#dasesd').show();
-        $('#mastrowall').show();
-        $('#mwfbiz').show();
-        $('#dsonic').show();
-        $('#reviews').show();
-        $('#newsmag').show();
+        $('#conconas').show();
     }
 });
