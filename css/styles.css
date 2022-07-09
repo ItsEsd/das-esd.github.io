@@ -10125,26 +10125,6 @@ body,html{
   background-color: #e6e6e6;
 }
 
-#dasesd,#mastrowall,#mwfbiz,#dsonic,#reviews{
-  display: none;
-}
-
-#signbtn{
-  bottom:20px;
-  right:20px;
-  position: fixed;
-}
-
-#signdiv{
-  padding:10px;
-  bottom:14px;
-  right:20px;
-  position: fixed;
-  width:240px;
-  border-radius: 10px;
-  background-color: #242424;
-  display: none;
-}
 .social-icons a{
   margin-bottom:5px;
 }
