@@ -1,10 +1,4 @@
-/*
 
-Flat Template
-
-http://www.templatemo.com/tm-491-flat
-
-*/
 
 body {
 	background-color: #DDDDDD; /*#282F39*/
@@ -76,7 +70,7 @@ button:focus { outline: none; }
 .cd-slider-nav .nav-link:hover,
 .cd-slider-nav .nav-link:focus {
 	background-color: rgba(255,255,255,1);
-	color: #5394D6;
+	color: #0611ac;
 }
 
 /* Hero Slider */
@@ -107,6 +101,9 @@ button:focus { outline: none; }
 .tm-textbox {
 	display: inline-block;
 	padding: 40px 45px;
+	max-height:380px;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .cd-hero-slider h2, .cd-hero-slider p {
@@ -433,4 +430,21 @@ border-top-color: #f9c922; -webkit-animation: spin 1.5s linear infinite; /* Chro
 	.cd-hero-slider p:last-child { margin-bottom: 0; }
 	.cd-hero-slider .cd-full-width { padding-top: 0; }
 	.cd-hero-slider .tm-text { font-size: 1em; }
+}
+
+.footleft{
+	bottom:10px;
+	left:10px;
+	position: fixed;
+	border: none;
+	cursor: pointer;
+	padding:4px 10px;
+    background-color: #ffffff9a;
+}
+.footleft:hover{
+background-color: #ffffffb4;
+}
+.footleft svg{
+width:24px;
+height:24px;
 }
