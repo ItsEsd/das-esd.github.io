@@ -23,8 +23,8 @@
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">A b o u t</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#dasesd">@ i t s E s D</a></li>
           <ul class="navbar-subitem">
-            <li><a href="#">- B Talk</a></li>
-          <li><a  href="#">- DQuote E</a></li>
+            <li><a href="b-talk/">- B Talk</a></li>
+          <li><a  href="dquote-e/">- DQuote E</a></li>
         </ul>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mwfbiz">P r o j e c t s</a></li>
           <ul class="navbar-subitem">
@@ -32,9 +32,9 @@
             <li><a href="https://mastrowall.com">mAstroWall</a></li>
           </ul>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#dsonic">D S o n i c </a></li>
-          <li class="nav-subitem"><a href="#" disabled>- Gallery</a></li>
-          <li class="nav-subitem"><a href="#">- Video</a></li>
-          <li class="nav-subitem"><a href="#">- Audio</a></li>
+          <li class="nav-subitem"><a href="gallery/" disabled>- Gallery</a></li>
+          <li class="nav-subitem"><a href="videos/">- Video</a></li>
+          <li class="nav-subitem" id="onaudio"><a href="#">- Audio</a></li>
           <br>
           <ul class="nav-conas" id="signbtn">Continue As >></ul>
         </ul>
@@ -53,7 +53,11 @@
       <hr class="hr-dpro-sec" />
       <div ng-include="'divsec/funda.html'"></div>
       <div id="conconas"><div ng-include="'divsec/conas.html'"></div></div>
-    </div>
+      <div id="audioframe">
+        <span id='clsaud'>Close</span>
+        <div ng-include="'audios/ap-1.html'"></div></div>
+    </div> 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
