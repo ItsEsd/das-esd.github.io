@@ -54,3 +54,12 @@ $('#justpass').on('input',function(){
         $('#conconas').show();
     }
 });
+
+$('#onaudio').click(function(){
+$('#audioframe').toggle();
+});
+
+
+$('#clsaud').click(function(){
+    $('#audioframe').hide();
+    });
