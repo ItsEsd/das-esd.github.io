@@ -3985,8 +3985,9 @@ input[type=button].btn-block {
   display: flex;
   flex-direction: column;
   padding-left: 0;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   list-style: none;
+  
 }
 .navbar-nav .nav-link {
   padding-right: 0;
