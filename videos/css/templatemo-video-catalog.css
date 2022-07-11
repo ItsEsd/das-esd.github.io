@@ -533,6 +533,7 @@ video {
 	border: 2px solid #222222;
 	cursor: pointer;
 }
+
 .footleft button:hover{
 background-color: #b4b4b4;
 }
