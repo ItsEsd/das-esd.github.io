@@ -142,12 +142,16 @@ a:hover, a:active, a:focus {
 }
 
 #about, #work,
-#contact, footer {
+#contact {
   position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
 }
-
+footer{
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 
 /*---------------------------------------
   Pre loader section              
@@ -493,4 +497,22 @@ footer .dash-line {
     height: 85vh;
   } 
 
+}
+
+
+.footleft{
+	bottom:10px;
+	left:10px;
+	position: absolute;
+	border: none;
+	cursor: pointer;
+	padding:4px 10px;
+    background-color: #ffffff;
+}
+.footleft:hover{
+background-color: #ffffffb4;
+}
+.footleft svg{
+width:24px;
+height:24px;
 }
