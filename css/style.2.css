@@ -27,7 +27,7 @@ cursor: pointer;
     width:100%;
     height:100%;
     overflow-y: scroll;
-    z-index: 8000;
+    z-index: 14000;
     background-color: #181818a8;
     border-bottom: 2px solid white;
     display: none;
@@ -86,7 +86,7 @@ right:10px;
     top:0px;
     position: fixed;
     display: block;
-    background-color: rgba(24, 23, 23, 0.678);
+    background-color: #181717d7;
     height:100%;
     width: 100%;
     overflow-y:auto;
@@ -96,7 +96,7 @@ right:10px;
 
   #conconas div{
     max-width: 800px;
-    background-color: white;
+    background-color: #d8d8d8;
   }
   
 #dasesd,#mastrowall,#mwfbiz,#dsonic,#reviews{
@@ -114,4 +114,38 @@ right:10px;
   background-color: #242424;
   display: none;
   z-index: 100;
+}
+
+#audioframe{
+    top:0px;
+    right:0px;
+    position: fixed;
+    height:100%;
+    width:100%;
+    display: none;
+}
+#audioframe iframe{
+    height:100%;
+    width:100%;
+    border:0px;
+}
+#onaudio{
+    cursor: pointer;
+}
+
+#clsaud{
+    top:10px;
+    right:10px;
+    position: fixed;
+    padding:4px 10px;
+    background-color: #181818;
+    color:rgb(255, 255, 255);
+    border: 1px solid white;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#clsaud:hover{
+    background-color: #3f3f3f;
+
 }
