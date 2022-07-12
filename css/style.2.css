@@ -149,3 +149,15 @@ right:10px;
     background-color: #3f3f3f;
 
 }
+
+#clssigndiv{
+    float:right;
+    padding:0px 6px;
+    background-color: black;
+    color:white;
+    cursor: pointer;
+    font-size: 14px;
+}
+#clssigndiv:hover{
+    background-color: #3f3f3f;
+}
