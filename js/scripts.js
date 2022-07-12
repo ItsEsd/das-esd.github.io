@@ -45,6 +45,7 @@
 $('#signbtn').click(function(){
     $('#signdiv').toggle('fast');
     $('#conconas').hide();
+    $(".navbar-collapse").collapse("hide");
 });
 
 $('#justpass').on('input',function(){
@@ -57,6 +58,7 @@ $('#justpass').on('input',function(){
 
 $('#onaudio').click(function(){
 $('#audioframe').toggle();
+$(".navbar-collapse").collapse("hide");
 });
 
 
