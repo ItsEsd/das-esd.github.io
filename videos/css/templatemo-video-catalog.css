@@ -528,9 +528,8 @@ video {
 }
 .footleft{
 	bottom:0px;
-	right:0px;
+	right:10px;
 	position: relative;
-	border: 2px solid #222222;
 	cursor: pointer;
 }
 
@@ -541,5 +540,7 @@ background-color: #b4b4b4;
 width:24px;
 height:24px;
 }
-
+button{
+    border:0px;
+}
 button:focus,button:active{outline:none;}
