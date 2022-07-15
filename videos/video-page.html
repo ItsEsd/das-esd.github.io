@@ -29,7 +29,7 @@
                                     <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
                                         <ul class="navbar-nav text-uppercase">
                                             <li class="nav-item active">
-                                                <a class="nav-link tm-nav-link" href="index.html">Videos <span class="sr-only">(current)</span></a>
+                                                <a class="nav-link tm-nav-link" href="#relvid">Videos <span class="sr-only">(current)</span></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -55,7 +55,7 @@
 		</div>
 
 		<!-- Page content -->
-		<div class="container-fluid" style="background-color:#222222;">
+		<div class="container-fluid" id="pgstart" style="background-color:#222222;">
 			<div class="mx-auto tm-content-container">
 				<main>
 					<div class="row mb-5 pb-4">
@@ -67,27 +67,39 @@
 							</video></center>
 						</div>
 					</div>
-					<div class="row mb-5 pb-5">
+<center>
+	<div class="vidContent">
+	<h2 class="mb-5 tm-video-title">tubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf</h2>
+								<p class="mb-4">ubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf
+									ubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf
+									ubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf
+									ubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf
+									ubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf
+									ubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf
+
+								</p>	
+								</div>
+</center>
+
+
+<!-- 
+					<div class="row mb-5 pb-5 container">
 						<div class="col-xl-8 col-lg-7">
-							<!-- Video description -->
 							<div class="tm-video-description-box">
-								<h2 class="mb-5 tm-video-title">--------------------------------</h2>
-								<p class="mb-4">--------------------------------
-									--------------------------------
-									--------------------------------
-									--------------------------------
-									--------------------------------
-									--------------------------------
-									--------------------------------
-									--------------------------------
-									--------------------------------
+								<h2 class="mb-5 tm-video-title">tubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf</h2>
+								<p class="mb-4">ubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf
+									ubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf
+									ubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf
+									ubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf
+									ubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf
+									ubbndfsdfg dsfgjdsgf sdfjdsfjg dsjfgjdsfjdsgjfds fjdsf
 
 								</p>	
 							</div>							
 						</div>
-						<div class="col-xl-4 col-lg-5">
-							<!-- Share box 
-							<div class="tm-bg-gray tm-share-box">
+						<div class="col-xl-4 col-lg-5"> -->
+							<!-- Share box  -->
+							<!-- <div class="tm-bg-gray tm-share-box">
 								<h6 class="tm-share-box-title mb-4">Share this video</h6>
 								<div class="mb-5 d-flex">
 									<a href="" class="tm-bg-white tm-share-button"><i class="fab fa-facebook"></i></a>
@@ -104,11 +116,12 @@
 								<div>
 									<button class="btn btn-primary p-0 tm-btn-animate tm-btn-download tm-icon-download"><span>Download Video</span></button>	
 								</div>								
-							</div>-->
+							</div>
 						</div>
-					</div>
-					<div class="row pt-4 pb-5">
-						<div class="col-12">
+					</div> -->
+
+					<div class="row" id="relvid">
+						<div class="col-12" style="margin-bottom:0px;">
 							<h2 class="mb-5 tm-text-primary">Related Videos for You</h2>
 							<div class="row tm-catalog-item-list">
 		                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
@@ -249,6 +262,9 @@
     				$('#tm-likes-count').html('485 likes');
     			}
     		});
+		$('html, body').animate({
+        scrollTop: $("#pgstart").offset().top + 60
+      }, "slow");
     	});
     </script>
 </body>
