@@ -3,6 +3,7 @@
   <head>
     <title>Audios AP #2 - Das Live @ItsEsD</title>
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.jpg" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
    </head>
    <style>
 #background {
@@ -101,6 +102,7 @@
   justify-content: center;
   align-items: flex-start;
   padding-left: 5%;
+  width:180px;
   /* border: 1px solid red; */
 }
 
@@ -124,6 +126,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin-top:10px;
   /* border: 1px solid red; */
 }
 .next-prev span{
@@ -181,12 +184,12 @@ margin-bottom:4px;
    </style>
   <body>
     <div class="outer-container">
-        <img src="https://i.ibb.co/7RhfRBZ/Fine-Line-Harry-Styles.jpg" alt="Harry Styles' Fine Line album cover" id="background" />
+        <img src="../audios/files/image/thumb-1.jpg" alt="Harry Styles' Fine Line album cover" id="background" />
         <audio src="https://res.cloudinary.com/cbanlawi/video/upload/v1614140796/HarryStyles-WatermelonSugar_f5471p.mp3" id="track"></audio>
       </div>
       
       <div class="player-container">
-        <img src="https://i.ibb.co/7RhfRBZ/Fine-Line-Harry-Styles.jpg" alt="Harry Styles' Fine Line album cover" id="thumbnail" />
+        <img src="../audios/files/image/thumb-1.jpg" alt="Harry Styles' Fine Line album cover" id="thumbnail" />
       
         <div class="box">
           <div class="play-pause">
@@ -237,19 +240,90 @@ let pause = document.getElementById("pause");
 let next = document.getElementById("next-track");
 let prev = document.getElementById("prev-track");
 trackIndex = 0;
-
 tracks = [
   "https://res.cloudinary.com/cbanlawi/video/upload/v1614140796/HarryStyles-WatermelonSugar_f5471p.mp3",
   "https://res.cloudinary.com/cbanlawi/video/upload/v1614144520/Justin_Bieber-Yummy_vercib.mp3",
-  "https://res.cloudinary.com/cbanlawi/video/upload/v1614186705/Loud_Luxury_ft._Brando_-_Body_fm7cdr.mp3"
+  "https://res.cloudinary.com/cbanlawi/video/upload/v1614186705/Loud_Luxury_ft._Brando_-_Body_fm7cdr.mp3",
+  "../audios/files/audio/eng/AdoreYou.mp3",
+  "../audios/files/audio/eng/All Of Me.mp3",
+  "../audios/files/audio/eng/Counting Stars.mp3",
+  "../audios/files/audio/eng/Am I Wrong.mp3",
+  "../audios/files/audio/eng/A Sky Full Of Stars.mp3",
+  "../audios/files/audio/eng/Bailando.mp3",
+  "../audios/files/audio/eng/Chandelier.mp3",
+  "../audios/files/audio/eng/Demons.mp3",
+  "../audios/files/audio/eng/Happy.mp3",
+  "../audios/files/audio/eng/Let Her Go.mp3",
+  "../audios/files/audio/eng/Let It Go.mp3",
+  "../audios/files/audio/eng/Play It Again.mp3",
+  "../audios/files/audio/eng/Radioactive.mp3",
+  "../audios/files/audio/eng/Say Something.mp3",
+  "../audios/files/audio/eng/Stay With Me.mp3",
+  "../audios/files/audio/eng/Story Of My Life.mp3",
+  "../audios/files/audio/eng/Wiggle.mp3",
+  "../audios/files/audio/eng/Wrecking Ball.mp3",
+  "../audios/files/audio/eng/One Dance.mp3",
+  "../audios/files/audio/eng/004. Fifth Harmony feat. Ty Dolla $ign - Work From Home - Copy.mp3",
+  "../audios/files/audio/eng/005. The Chainsmokers feat. Daya - Don't Let Me Down.mp3",
+  "../audios/files/audio/eng/006. Lukas Graham - 7 Years.mp3",
+  "../audios/files/audio/eng/007. Mike Posner - I Took A Pill In Ibiza.mp3",
+  "../audios/files/audio/eng/012. Zayn - Pillowtalk.mp3",
+  "../audios/files/audio/eng/020. G-Eazy X Bebe Rexha - Me, Myself & I.mp3",
+  "../audios/files/audio/eng/024. Sia feat. Sean Paul - Cheap Thrills.mp3",
+  "../audios/files/audio/eng/030. Twenty One Pilots - Ride.mp3",
+  "../audios/files/audio/eng/046. Charlie Puth - One Call Away.mp3",
+  "../audios/files/audio/eng/049. Disturbed - The Sound Of Silence.mp3",
+  "../audios/files/audio/eng/078. Major Lazer feat. Nyla - Light It Up.mp3",
+  "../audios/files/audio/eng/080. Alan Walker - Faded.mp3"
+
 ];
 thumbnails = [
-  "https://i.ibb.co/7RhfRBZ/Fine-Line-Harry-Styles.jpg",
-  "https://i.ibb.co/dkDC9CP/Justin-Bieber-Song-Cover-Art.jpg",
-  "https://i.ibb.co/371t9Md/Loud-Luxury-Song-Cover-Art.jpg"
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-wo.gif",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-wo.gif",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-wo.gif",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-1.jpg",
+  "../audios/files/image/thumb-wo.gif",
+  "../audios/files/image/thumb-wo.gif",
 ];
-trackArtists = ["Harry Styles", "Justin Bieber", "Loud Luxury ft. Brando"];
-trackTitles = ["Watermelon Sugar", "Yummy", "Body"];
+trackArtists = ["Harry Styles", "Justin Bieber", "Loud Luxury ft. Brando","Miley Cyrus","John Legend","OneRepublic",
+"Nico & Vinz","Coldplay","Enrique Iglesias","Sia","Imagine Dragons","Pharrel Williams","Passenger","Robert Lopez","Luke Bryan",
+"Imagine Dragon","A Great Big World","Sam Smith","One Direction","Jason Derulo","Miley Cyrus","Drake | Wizkid | Kyla",
+"Fifth Harmony","The Chainsmokers feat. Daya ","Lukas Graham","Mike Posner","Zayn","G-Eazy X Bebe Rexha",
+"Sia feat. Sean Paul","Twenty One Pilots","Charlie Puth","Disturbed","Major Lazer feat. Nyla","Alan Walker"];
+
+trackTitles = ["Watermelon Sugar", "Yummy", "Body","Adore You","All OF Me","Counting Stars","Am I Wrong",
+"A Sky Full of Stars","Bailando","Chandelier","Demons","Happy","Let Her Go","Let It Go","Play It Again",
+"Radioactive","Say Something","Stay With Me","Story Of My Life","Wiggle","Wrecking Ball","One Dance",
+"Work From Home","Don't Let Me Down","7 Years","I Took A Pill In Ibiza","Pillowtalk","Me, Myself & I",
+"Cheap Thrills","Ride","One Call Away","The Sound Of Silence","Light It Up","Faded"];
 
 let playing = true;
 
