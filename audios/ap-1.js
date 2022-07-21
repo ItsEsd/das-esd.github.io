@@ -16,15 +16,17 @@ trackIndex = 0;
 tracks = [
   "https://res.cloudinary.com/cbanlawi/video/upload/v1614140796/HarryStyles-WatermelonSugar_f5471p.mp3",
   "https://res.cloudinary.com/cbanlawi/video/upload/v1614144520/Justin_Bieber-Yummy_vercib.mp3",
-  "https://res.cloudinary.com/cbanlawi/video/upload/v1614186705/Loud_Luxury_ft._Brando_-_Body_fm7cdr.mp3"
+  "https://res.cloudinary.com/cbanlawi/video/upload/v1614186705/Loud_Luxury_ft._Brando_-_Body_fm7cdr.mp3",
+  "../audios/files/audio/eng/AdoreYou.mp3"
 ];
 thumbnails = [
   "https://i.ibb.co/7RhfRBZ/Fine-Line-Harry-Styles.jpg",
   "https://i.ibb.co/dkDC9CP/Justin-Bieber-Song-Cover-Art.jpg",
-  "https://i.ibb.co/371t9Md/Loud-Luxury-Song-Cover-Art.jpg"
+  "https://i.ibb.co/371t9Md/Loud-Luxury-Song-Cover-Art.jpg",
+  "../audios/files/image/thumb-1.jpg"
 ];
-trackArtists = ["Harry Styles", "Justin Bieber", "Loud Luxury ft. Brando"];
-trackTitles = ["Watermelon Sugar", "Yummy", "Body"];
+trackArtists = ["Harry Styles", "Justin Bieber", "Loud Luxury ft. Brando","Miley Cyrus"];
+trackTitles = ["Watermelon Sugar", "Yummy", "Body","Adore You"];
 
 let playing = true;
 
