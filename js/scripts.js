@@ -47,6 +47,7 @@ $('#signbtn').click(function(){
     $('#signdiv').toggle('fast');
     $('#conconas').hide();
     $(".navbar-collapse").collapse("hide");
+    $('#newsmag').css('z-index','1');
 });
 
 $('#justpass').on('input',function(){
@@ -54,6 +55,7 @@ $('#justpass').on('input',function(){
     if(jstp=="19906"){
         $('#signdiv').hide();
         $('#conconas').show();
+        $('#newsmag').css('z-index','20000');
     }
 });
 
