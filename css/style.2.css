@@ -161,3 +161,25 @@ right:10px;
 #clssigndiv:hover{
     background-color: #3f3f3f;
 }
+
+#about{
+    background-image: url('../assets/img/sectCover/about.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color:#dad8d8;
+}
+#dasesd{
+    background-image: url('../assets/img/sectCover/esddot.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#mwfbiz{
+    background-image: url('../assets/img/sectCover/projects.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#dsonic{
+    background-image: url('../assets/img/sectCover/dsonic.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
