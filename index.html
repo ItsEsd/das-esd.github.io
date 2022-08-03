@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/style.2.css" rel="stylesheet" />
+    <link href='css/calender.css' rel='stylesheet' />
+    <script src='js/calender.js'></script>
     <base target="_blank" />
   </head>
 
@@ -40,7 +42,15 @@
         </ul>
       </div>
     </nav>
-    <div id="signdiv" align="center"> <span onclick="$('#signdiv').hide('fast');" id="clssigndiv">Close</span><input id="justpass" class="form-control" type="password" placeholder="Your Key : **********" style="text-align: center;" required /> </div>
+    <div id="calcont"><div id='calendar'></div></div>
+    <div id="signdiv" align="center"> <span onclick="$('#signdiv').hide('fast');" id="clssigndiv">Close</span>
+      <input style="display: none;" id="allsvevnt"/>
+      <form id="inlivefrm" autocomplete="off" onsubmit="return false;">
+        <input id="glddid" class="form-control" type="text" placeholder="Geo ID" style="text-align: left;" required/>
+        <input id="justpass" class="form-control" type="password" placeholder="Your Key : **********" style="text-align: left;" required /> 
+       <input type="submit" id="subinlv" value="Go"/>
+      </form>
+    </div>
     <div class="container-fluid p-0">
       <section class="dpro-section" id="about">
         <div class="dpro-section-content">
@@ -50,12 +60,15 @@
           <div class="social-icons"> <a class="social-icon" href="https://www.linkedin.com/in/soubhik-das"><i class="fab fa-linkedin-in"></i></a> <a class="social-icon" href="https://github.com/das-esd"><i class="fab fa-github"></i></a> <a class="social-icon" href="https://twitter.com/somrdas"><i class="fab fa-twitter"></i></a> <a class="social-icon" href="https://www.facebook.com/profileid1106"><i class="fab fa-facebook-f"></i></a> </div>
         </div>
       </section>
+      <div id="livfunc" style="display:none;"><span id="clcnas"> >> </span><span id="onopcal">📅</span></div>
       <hr class="hr-dpro-sec" />
       <div ng-include="'divsec/funda.html'"></div>
-      <div id="conconas"><div ng-include="'divsec/conas.html'"></div></div>
+      <div id="conconas">
+        <div ng-include="'divsec/conas.html'"></div></div>
       <div id="audioframe">
         <span id='clsaud'>Close</span>
         <div ng-include="'audios/ap-1.html'"></div></div>
+        
     </div> 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
