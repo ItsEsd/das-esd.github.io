@@ -108,6 +108,7 @@ $('#signdiv').hide();
 $('#conconas').show();
 $('#livfunc').show();
 $('#newsmag').css('z-index','20000');
+$('#onaudio').show();
 }
 else{
 document.getElementById('subinlv').disabled= false;
