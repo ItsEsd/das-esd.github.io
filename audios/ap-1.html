@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <title>Audios AP #2 - Das Live @ItsEsD</title>
+    <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.jpg" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
    </head>
    <style>
@@ -180,7 +182,72 @@ margin-bottom:4px;
   color: #f94c57;
   text-shadow: 0 0 15px white;
 }
+.playcon{
+padding:5px;
+border:1px solid #f94c57;
+cursor:pointer;
+}
+.playcon:hover{
+  background-color: #d1d1d1a9;
+}
+#playbody{
+font-family: 'Courier New', Courier, monospace;
+background-color: #e0e0e0;
+bottom:60px; 
+  display:none;
+  max-width: 240px;
+  max-height:280px;
+  overflow-y: auto;
+  z-index:10;
+  position: fixed;
+  padding:5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#playbody::-webkit-scrollbar{
+  border-radius: 5px;
+  width:6px;
+  background: #4d4d4d;
+}
 
+#playbody::-webkit-scrollbar-thumb{
+  background: #f94c57;
+  border-radius: 5px;
+}
+#playlist::-webkit-slider-thumb {
+  appearance: none;
+  height: 11px;
+  width: 11px;
+  outline: none;
+  background: #f94c57;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+
+.ttitle{
+font-size: 16px;
+font-weight:600;
+}
+.tartist{
+  font-size: 14px;
+font-weight:400;
+}
+
+#otplaylist{
+  background-color:#cecece;
+  padding:4px 6px;
+  bottom:20px;
+  /* left:20px; */
+  border: 0px;
+  position: fixed;
+  cursor:pointer;
+  font-size:20px;
+  outline: none;
+}
+#otplaylist:hover{
+  background-color: #afafaf;
+}
    </style>
   <body>
     <div class="outer-container">
@@ -225,6 +292,13 @@ margin-bottom:4px;
           </div>
         </div>
       </div>
+      <section>
+        <div id="playlist">
+ <div id="playbody"></div>         
+<button id="otplaylist">🎶</button>
+
+        </div>
+      </section>
 <script>
   const track = document.getElementById("track");
 const thumbnail = document.getElementById("thumbnail");
@@ -276,35 +350,35 @@ tracks = [
 "../audios/files/audio/bng/rabindra-ad/har mana har.mp3",
 
 /* 2nd Update- Sec-2*/
-"../audios/files/audio/eng/Jadi Tare Nai Chinj Go.mp3",
-"../audios/files/audio/eng/Je Drubpad Deioco Badhi.mp3",
-"../audios/files/audio/eng/Jete Jete Ekla Pathe (Bengali-Mp3.com).mp3",
-"../audios/files/audio/eng/Jete Jete Ekla Pathe.mp3",
-"../audios/files/audio/eng/Jharo Jharo Barishe.mp3",
-"../audios/files/audio/eng/Jonaki Ki Sukhe  (Bengali-Mp3.com).mp3",
-"../audios/files/audio/eng/Madhur dhwani baje Sraboni Sen.mp3",
-"../audios/files/audio/eng/Majhe Majhe Tobo Dekha Pai Arnob.mp3",
-"../audios/files/audio/eng/Mamo Antaro Udase.mp3",
-"../audios/files/audio/eng/Megh Boleche Jabo Jabo (Bengali-Mp3.com).mp3",
+"../audios/files/audio/bng/rabindra-ad/Jadi Tare Nai Chinj Go.mp3",
+"../audios/files/audio/bng/rabindra-ad/Je Drubpad Deioco Badhi.mp3",
+"../audios/files/audio/bng/rabindra-ad/Jete Jete Ekla Pathe (Bengali-Mp3.com).mp3",
+"../audios/files/audio/bng/rabindra-ad/Jete Jete Ekla Pathe.mp3",
+"../audios/files/audio/bng/rabindra-ad/Jharo Jharo Barishe.mp3",
+"../audios/files/audio/bng/rabindra-ad/Jonaki Ki Sukhe  (Bengali-Mp3.com).mp3",
+"../audios/files/audio/bng/rabindra-ad/Madhur dhwani baje Sraboni Sen.mp3",
+"../audios/files/audio/bng/rabindra-ad/Majhe Majhe Tobo Dekha Pai Arnob.mp3",
+"../audios/files/audio/bng/rabindra-ad/Mamo Antaro Udase.mp3",
+"../audios/files/audio/bng/rabindra-ad/Megh Boleche Jabo Jabo (Bengali-Mp3.com).mp3",
 
-"../audios/files/audio/eng/Megh boleche jabo jabo- Debadrito.mp3",
-"../audios/files/audio/eng/Nibir Ama Timir Hote.mp3",
-"../audios/files/audio/eng/Nitya Tomar Je Phool (Bengali-Mp3.com).mp3",
-"../audios/files/audio/eng/Ore Griho Bashi.mp3",
-"../audios/files/audio/eng/Phoole Phoole Dhole Dhole.mp3",
-"../audios/files/audio/eng/Pohalo Pohalo Bibhabari.mp3",
-"../audios/files/audio/eng/Prano Bhoriye (Bengali-Mp3.com).mp3",
-"../audios/files/audio/eng/Purano sei diner kotha.mp3",
-"../audios/files/audio/eng/Saghana Gahana Ratri.mp3",
-"../audios/files/audio/eng/Sei Bhalo Sei Bhalo (Bengali-Mp3.com).mp3",
+"../audios/files/audio/bng/rabindra-ad/Megh boleche jabo jabo- Debadrito.mp3",
+"../audios/files/audio/bng/rabindra-ad/Nibir Ama Timir Hote.mp3",
+"../audios/files/audio/bng/rabindra-ad/Nitya Tomar Je Phool (Bengali-Mp3.com).mp3",
+"../audios/files/audio/bng/rabindra-ad/Ore Griho Bashi.mp3",
+"../audios/files/audio/bng/rabindra-ad/Phoole Phoole Dhole Dhole.mp3",
+"../audios/files/audio/bng/rabindra-ad/Pohalo Pohalo Bibhabari.mp3",
+"../audios/files/audio/bng/rabindra-ad/Prano Bhoriye (Bengali-Mp3.com).mp3",
+"../audios/files/audio/bng/rabindra-ad/Purano sei diner kotha.mp3",
+"../audios/files/audio/bng/rabindra-ad/Saghana Gahana Ratri.mp3",
+"../audios/files/audio/bng/rabindra-ad/Sei Bhalo Sei Bhalo (Bengali-Mp3.com).mp3",
 
-"../audios/files/audio/eng/Sokhi Bhabona Kahare Bale.mp3",
-"../audios/files/audio/eng/Sudhu Jaoya Asa (Bengali-Mp3.com).mp3",
-"../audios/files/audio/eng/Sudhu Tomar Bani (Bengali-Mp3.com).mp3",
-"../audios/files/audio/eng/Tobu mone rekho Sraboni Sen.mp3",
-"../audios/files/audio/eng/Tomar Khola Haowa (Bengali-Mp3.com).mp3",
-"../audios/files/audio/eng/Tumi Dak Diyecho.mp3",
-"../audios/files/audio/eng/Tumi Rabe Nirabe.mp3",
+"../audios/files/audio/bng/rabindra-ad/Sokhi Bhabona Kahare Bale.mp3",
+"../audios/files/audio/bng/rabindra-ad/Sudhu Jaoya Asa (Bengali-Mp3.com).mp3",
+"../audios/files/audio/bng/rabindra-ad/Sudhu Tomar Bani (Bengali-Mp3.com).mp3",
+"../audios/files/audio/bng/rabindra-ad/Tobu mone rekho Sraboni Sen.mp3",
+"../audios/files/audio/bng/rabindra-ad/Tomar Khola Haowa (Bengali-Mp3.com).mp3",
+"../audios/files/audio/bng/rabindra-ad/Tumi Dak Diyecho.mp3",
+"../audios/files/audio/bng/rabindra-ad/Tumi Rabe Nirabe.mp3",
 
 /*First Update Sec-1 */
   "https://res.cloudinary.com/cbanlawi/video/upload/v1614140796/HarryStyles-WatermelonSugar_f5471p.mp3",
@@ -1092,7 +1166,55 @@ trackTitles = [
   "Wholeness",
 ];
 
+var alllen = trackTitles.length;
+for (var a=[],i=0;i<alllen-1;++i) a[i]=i;
+function shuffle(array) {
+  var tmp, current, top = array.length;
+  if(top) while(--top) {
+    current = Math.floor(Math.random() * (top + 1));
+    tmp = array[current];
+    array[current] = array[top];
+    array[top] = tmp;
+  }
+  return array;
+}
+a = shuffle(a);
+var fin;
+for(var d=0;d<a.length;d++){
+  fin = a[d];
+  document.getElementById('playbody').innerHTML += "<div class='playcon' onclick='playsong(this)'><span class='ttitle'>"+
+    trackTitles[fin]+"</span><br><span class='tartist'>"+trackArtists[fin]+"</span></div>";
+  }
+
 let playing = true;
+function playsong(label){
+  var list = document.getElementsByClassName('playcon');
+  list=[].slice.call(list);
+  var pos =  list.indexOf(label);
+  var ttitle = document.getElementsByClassName('ttitle');
+  var tartist = document.getElementsByClassName('tartist');
+  var title = ttitle[pos].innerText;
+  var artist = tartist[pos].innerText;
+  for(var k=0;k<alllen;k++){
+    if(title == String(trackTitles[k]) && artist ==String(trackArtists[k]) ){
+      
+      track.src = tracks[k];
+  thumbnail.src = thumbnails[k];
+  background.src = thumbnails[k];
+
+  trackArtist.textContent = trackArtists[k];
+  trackTitle.textContent = trackTitles[k];
+
+
+  trackIndex = k;
+  playing = true;
+  pausePlay();
+    }
+  }
+  document.getElementById('playbody').style.display ="none";
+
+}
+
 
 function pausePlay() {
   if (playing) {
@@ -1181,8 +1303,18 @@ function changeProgressBar() {
 }
 
 progressBar.addEventListener("click", changeProgressBar);
+otplaylist.addEventListener('click',showallsongs);
+
+function showallsongs(){
+  var elem = document.getElementById('playbody');
+  if(elem.style.display!= "block"){
+    elem.style.display = "block";
+  }
+  else{
+    elem.style.display = "none";
+  }
+}
 
 </script>
 </body>
-
 </html>
