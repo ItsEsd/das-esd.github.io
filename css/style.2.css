@@ -81,7 +81,7 @@ color:#ffffffb7;
 .nav-conas:hover{
 right:10px;
 }
-
+ 
 #conconas{
     top:0px;
     position: fixed;
@@ -118,7 +118,7 @@ right:10px;
 
 #audioframe{
     top:0px;
-    right:0px;
+    /* right:0px; */
     position: fixed;
     height:100%;
     width:100%;
