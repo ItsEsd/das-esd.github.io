@@ -51,7 +51,7 @@ $('#signbtn').click(function(){
 });
 
 $('#onaudio').click(function(){
-$('#audioframe').toggle();
+$('#audioframe').toggle();$('#conconas').hide();
 $(".navbar-collapse").collapse("hide");
 });
 
@@ -67,11 +67,11 @@ $('#onopcal').click(function(){
   $('#clcnas').click(function(){
     var hdelem = document.getElementById('conconas');
     if(hdelem.style.display =="block"){
-      $('#conconas').hide();
+      $('#conconas').hide();$('#calcont').hide();
       document.getElementById('clcnas').innerHTML = " << ";
     }
-    else{
-      $('#conconas').show();
+    else{ 
+      $('#conconas').show();$('#audioframe').hide(); 
       document.getElementById('clcnas').innerHTML = " >> ";
     }
       });
@@ -101,14 +101,15 @@ function liveond(){
 function ldprevd(e){
 var res = e.records;
 if(res!="ID not found!"){
-  var cldata = res[0].Calender
+  var cldata = res[0].Calender;
 document.getElementById('allsvevnt').value=cldata;
 document.getElementById('subinlv').disabled= false;
+var k = window.btoa("SOUBHIK");SetCookie(1,k);
 $('#signdiv').hide();
-$('#conconas').show();
-$('#livfunc').show();
+$('#livfunc').show();$('#onaudio').show();
 $('#newsmag').css('z-index','20000');
-$('#onaudio').show();
+$("#conascon").load("divsec/conas.html"); 
+$("#adapp").load("audios/adapp.html"); 
 }
 else{
 document.getElementById('subinlv').disabled= false;
@@ -213,3 +214,61 @@ getcalendar();
   
   function ctrlqevrmv(e){
     liveond();}
+
+
+    ///////////Cookie/////////////
+
+    var SetCookie = function(exdays,uid) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = "_dfunc="+uid+"; expires=" + expires + ";path=/;domain=das-esd.github.io";
+    };
+    function GetCookie(cname) {
+      var name = cname + "="; 
+        var decodedCookie = decodeURIComponent(document.cookie); 
+        var ca = decodedCookie.split(';'); 
+        for (var i = 0; i < ca.length; i++) {
+           var c = ca[i]; while (c.charAt(0) == ' ') { c = c.substring(1); } 
+           if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); } 
+          } return "";
+    }
+   var useru = GetCookie("_dfunc"); 
+  if(useru !=''){
+    $('#onaudio').show();
+    document.getElementById('conascon').setAttribute('ng-include',"'divsec/conas.html'");
+    document.getElementById('adapp').setAttribute('ng-include',"'audios/adapp.html'");
+
+}
+function deleteAllCookies() {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i];
+      var eqPos = cookie.indexOf("=");
+      var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = name + "=true;"+"expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=das-esd.github.io";
+  }
+  setTimeout(function(){location.reload();},2000);
+}   
+
+var ewfGetCookie = function() {
+  var name = "_dfunc=true";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i <
+    ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      ewf_expire = true;
+      return;
+    }
+  }
+  ewf_expire = false;
+}();
+
+if (ewf_expire) {
+  deleteAllCookies();
+  window.open("https://das-github.io", "_self");
+}
