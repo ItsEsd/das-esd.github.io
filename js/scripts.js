@@ -40,41 +40,43 @@
     $("body").scrollspy({
         target: "#sideNav",
     });
+
+    $('#signbtn').click(function(){
+      $('#signdiv').toggle('fast');
+      $('#conconas').hide();
+      $(".navbar-collapse").collapse("hide");
+      $('#newsmag').css('z-index','1');
+  });
+  
+  $('#onaudio').click(function(){
+  $('#audioframe').toggle();$('#conconas').hide();
+  $(".navbar-collapse").collapse("hide");
+  });
+  
+  
+  $('#clsaud').click(function(){
+      $('#audioframe').hide();
+      });
+      
+  $('#onopcal').click(function(){
+        $('#calcont').toggle();
+        });
+  
+    $('#clcnas').click(function(){
+      var hdelem = document.getElementById('conconas');
+      if(hdelem.style.display =="block"){
+        $('#conconas').hide();$('#calcont').hide();
+        document.getElementById('clcnas').innerHTML = " << ";
+      }
+      else{ 
+        $('#conconas').show();$('#audioframe').hide(); 
+        document.getElementById('clcnas').innerHTML = " >> ";
+      }
+        });
+
 })(jQuery); // End of use strict
 
 
-$('#signbtn').click(function(){
-    $('#signdiv').toggle('fast');
-    $('#conconas').hide();
-    $(".navbar-collapse").collapse("hide");
-    $('#newsmag').css('z-index','1');
-});
-
-$('#onaudio').click(function(){
-$('#audioframe').toggle();$('#conconas').hide();
-$(".navbar-collapse").collapse("hide");
-});
-
-
-$('#clsaud').click(function(){
-    $('#audioframe').hide();
-    });
-    
-$('#onopcal').click(function(){
-      $('#calcont').toggle();
-      });
-
-  $('#clcnas').click(function(){
-    var hdelem = document.getElementById('conconas');
-    if(hdelem.style.display =="block"){
-      $('#conconas').hide();$('#calcont').hide();
-      document.getElementById('clcnas').innerHTML = " << ";
-    }
-    else{ 
-      $('#conconas').show();$('#audioframe').hide(); 
-      document.getElementById('clcnas').innerHTML = " >> ";
-    }
-      });
   ////////////////////////////////////////////
 
   var ur1= "https://script.google.com/macros/s/";
@@ -109,7 +111,6 @@ $('#signdiv').hide();
 $('#livfunc').show();$('#onaudio').show();
 $('#newsmag').css('z-index','20000');
 $("#conascon").load("divsec/conas.html"); 
-$("#adapp").load("audios/adapp.html"); 
 }
 else{
 document.getElementById('subinlv').disabled= false;
@@ -117,7 +118,10 @@ document.getElementById('subinlv').disabled= false;
 getcalendar();
 }
 
-
+////// Audios///////
+function loadaudio(){
+  $("#adapp").load("audios/adapp.html"); 
+}
     /////////////////Calender////////////////
 
  function getcalendar() {
@@ -139,7 +143,7 @@ getcalendar();
   var calendar = new FullCalendar.Calendar(calendarEl, {
   
       headerToolbar: {
-        left: 'prev,next,today',
+        left: 'prev,next',
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       },
@@ -223,6 +227,8 @@ getcalendar();
       d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
       var expires = "expires=" + d.toUTCString();
       document.cookie = "_dfunc="+uid+"; expires=" + expires + ";path=/;domain=das-esd.github.io";
+      // setTimeout(loadaudio(),1000) ;
+      loadaudio()
     };
     function GetCookie(cname) {
       var name = cname + "="; 
