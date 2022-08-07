@@ -1,3 +1,18 @@
+<script>
+function GetCookie(cname) {
+      var name = cname + "="; 
+        var decodedCookie = decodeURIComponent(document.cookie); 
+        var ca = decodedCookie.split(';'); 
+        for (var i = 0; i < ca.length; i++) {
+           var c = ca[i]; while (c.charAt(0) == ' ') { c = c.substring(1); } 
+           if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); } 
+          } return "";
+    }
+ var useru = GetCookie("_dfunc"); 
+    if(useru ==''){
+      window.open("https://das-esd.github.io", "_self");
+    }
+</script> 
 <section class="dpro-section" id="dasesd-as">
     <div class="dpro-section-content">
       <h2 class="mb-5">@itsEsD</h2>
