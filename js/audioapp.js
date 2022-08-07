@@ -1,17 +1,17 @@
-
-  const track = document.getElementById("track");
-  const thumbnail = document.getElementById("thumbnail");
-  const background = document.getElementById("background");
-  const trackArtist = document.getElementById("track-artist");
-  const trackTitle = document.getElementById("track-title");
-  const progressBar = document.getElementById("progressBar");
-  const currentTime = document.getElementById("currentTime");
-  const durationTime = document.getElementById("durationTime");
+  var track = document.getElementById("track");
+  var thumbnail = document.getElementById("thumbnail");
+  var background = document.getElementById("background");
+  var trackArtist = document.getElementById("track-artist");
+  var trackTitle = document.getElementById("track-title");
+  var progressBar = document.getElementById("progressBar");
+  var currentTime = document.getElementById("currentTime");
+  var durationTime = document.getElementById("durationTime");
   
-  let play = document.getElementById("play");
-  let pause = document.getElementById("pause");
-  let next = document.getElementById("next-track");
-  let prev = document.getElementById("prev-track");
+  var play = document.getElementById("play");
+  var pause = document.getElementById("pause");
+  var next = document.getElementById("next-track");
+  var prev = document.getElementById("prev-track");
+  var tracks,thumbnails,trackArtists,trackTitles;
   trackIndex = 0;
   tracks = [
     
@@ -864,7 +864,8 @@
     "The Leap",
     "Wholeness",
   ];
-  
+ 
+
   var alllen = trackTitles.length;
   for (var a=[],i=0;i<alllen-1;++i) a[i]=i;
   function shuffle(array) {
@@ -883,9 +884,16 @@
     fin = a[d];
     document.getElementById('playbody').innerHTML += "<div class='playcon' onclick='playsong(this)'><span class='ttitle'>"+
       trackTitles[fin]+"</span><br><span class='tartist'>"+trackArtists[fin]+"</span></div>";
+      var now = fin;
     }
-  
-  let playing = true;
+  track.src = tracks[now];
+  thumbnail.src = thumbnails[now];
+  background.src = thumbnails[now];
+
+  trackArtist.textContent = trackArtists[now];
+  trackTitle.textContent = trackTitles[now];
+
+    var playing = true;
   function playsong(label){
     var list = document.getElementsByClassName('playcon');
     list=[].slice.call(list);
@@ -989,8 +997,8 @@
   setInterval(progressValue, 500);
   
   function formatTime(sec) {
-    let minutes = Math.floor(sec / 60);
-    let seconds = Math.floor(sec - minutes * 60);
+    var minutes = Math.floor(sec / 60);
+    var seconds = Math.floor(sec - minutes * 60);
     if (seconds < 10) {
       seconds = `0${seconds}`;
     }
@@ -1013,5 +1021,4 @@
       elem.style.display = "none";
     }
   }
-  
-  
+   
