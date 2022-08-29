@@ -155,7 +155,15 @@ function loadaudio(){
       selectMirror: true,
       select: function(arg) {
         var title = prompt('Event Title:');
-        if (title) {
+      // Check and Restrict String
+      var checkstr = function(title) {  
+        var fl1 = title.split('"');
+        var fl2 = title.split('e}');
+        if (fl1[1] != null || fl2[1] !=null){
+          return true;
+        }
+      }
+        if (title != ""  && checkstr(title) != true) {
           calendar.addEvent({
             title: title,
             start: arg.start,
