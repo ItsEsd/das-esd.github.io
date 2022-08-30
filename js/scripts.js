@@ -234,7 +234,7 @@ function loadaudio(){
       var d = new Date();
       d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
       var expires = "expires=" + d.toUTCString();
-      document.cookie = "_dfunc="+uid+"; expires=" + expires + ";path=/;domain=127.0.0.1";
+      document.cookie = "_dfunc="+uid+"; expires=" + expires + ";path=/;domain=das-esd.github.io";
       // setTimeout(loadaudio(),1000) ;
       loadaudio()
     };
@@ -260,7 +260,7 @@ function deleteAllCookies() {
       var cookie = cookies[i];
       var eqPos = cookie.indexOf("=");
       var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-      document.cookie = name + "=true;"+"expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=127.0.0.1";
+      document.cookie = name + "=true;"+"expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=das-esd.github.io";
   }
   setTimeout(function(){location.reload();},2000);
 }   
