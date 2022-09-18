@@ -516,3 +516,15 @@ background-color: #ffffffb4;
 width:24px;
 height:24px;
 }
+
+.wow h4{
+  line-height: 30px;
+}
+.work-thumb .hndwrt{
+  padding:10px;
+  border: 2px solid #555555a2;
+  border-radius: 7px;
+}
+.hndtyped .col-md-6{
+ white-space:unset;
+}
