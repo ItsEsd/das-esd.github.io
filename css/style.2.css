@@ -96,7 +96,7 @@ right:10px;
 
   #conconas div{
     max-width: 800px;
-    background-color: #d8d8d8;
+    background-color: #bebebe;
   }
   
 #dasesd,#mastrowall,#mwfbiz,#dsonic,#reviews{
@@ -166,7 +166,7 @@ right:10px;
     background-image: url('../assets/img/sectCover/about.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    color:#dad8d8;
+    color:#dad8d8; 
 }
 #dasesd{
     background-image: url('../assets/img/sectCover/esddot.jpeg');
