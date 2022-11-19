@@ -2,12 +2,6 @@
 
     "use strict";
 
-        // PRE loader
-        $(window).load(function(){
-          $('.preloader').fadeOut(1000); // set duration in brackets    
-        });
-
-
         // Parallax Js
         function initParallax() {
           $('#home').parallax("100%", 0.3);
