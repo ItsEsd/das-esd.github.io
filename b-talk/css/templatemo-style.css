@@ -140,6 +140,7 @@ background-color:#585858;
 }
 
 .tm-2-col-textbox { 
+	width:100%;
 	max-width: 600px; 
 	-webkit-flex: 0 1 auto; 
 	    -ms-flex: 0 1 auto; 
