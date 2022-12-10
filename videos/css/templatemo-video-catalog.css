@@ -596,6 +596,9 @@ button:focus,button:active{outline:none;}
 #tm-video-container iframe{
     height:600px;
 }
+#smvidq{
+    font-family: 'Courier New', Courier, monospace;
+}
 @media screen and (max-width:400px){
 #tm-video-container iframe{
     height:360px;
