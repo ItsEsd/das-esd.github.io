@@ -21,8 +21,8 @@ var vsrc=[
 "../video/a-reason-todie.mp4",
 "../video/there-is-no-blood.mp4",
 "../video/love-and-breathe.mp4",
-"../video/dhire-dhire-se.mp4"
-
+"../video/dhire-dhire-se.mp4",
+"../video/ready-miss.mp4"
 ];
 
 var vidset =[
@@ -33,7 +33,8 @@ var vidset =[
     "artde",
     "tinbo",
     "labre",
-    "dhdhr"];
+    "dhdhr",
+    "hmiss"];
 
 var vidimg =[];
 
