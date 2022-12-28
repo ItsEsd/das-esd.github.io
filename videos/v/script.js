@@ -53,7 +53,6 @@ for(var k=0;k<vidset.length;k++){
     if( q == vidset[k]){
 
         document.getElementById('imvid').setAttribute("src",vsrc[k]);
-        console.log(vidset[k]);
         document.getElementById('vdtitle').innerHTML = "";
     }
 }
