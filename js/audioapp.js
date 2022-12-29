@@ -80,9 +80,7 @@
   "../audios/files/audio/bng/rabindra-ad/Tumi Rabe Nirabe.mp3",
   
   /*First Update Sec-1 */
-    "https://res.cloudinary.com/cbanlawi/video/upload/v1614140796/HarryStyles-WatermelonSugar_f5471p.mp3",
-    "https://res.cloudinary.com/cbanlawi/video/upload/v1614144520/Justin_Bieber-Yummy_vercib.mp3",
-    "https://res.cloudinary.com/cbanlawi/video/upload/v1614186705/Loud_Luxury_ft._Brando_-_Body_fm7cdr.mp3",
+   
     "../audios/files/audio/eng/AdoreYou.mp3",
     "../audios/files/audio/eng/All Of Me.mp3",
     "../audios/files/audio/eng/Counting Stars.mp3",
@@ -299,9 +297,7 @@
   
   /*First Update Sec-1 */
   
-    "../audios/files/image/thumb-1.jpg",
-    "../audios/files/image/thumb-1.jpg",
-    "../audios/files/image/thumb-1.jpg",
+   
     "../audios/files/image/thumb-wo.gif",
     "../audios/files/image/thumb-1.jpg",
     "../audios/files/image/thumb-1.jpg",
@@ -511,9 +507,7 @@
   
    /*First Update Sec-1 */
   
-  "Harry Styles", 
-  "Justin Bieber", 
-  "Loud Luxury ft. Brando",
+  
   "Miley Cyrus",
   "John Legend",
   "OneRepublic",
@@ -722,9 +716,6 @@
   
    /*First Update Sec-1 */
   
-  "Watermelon Sugar",
-  "Yummy",
-  "Body",
   "Adore You",
   "All OF Me",
   "Counting Stars",
