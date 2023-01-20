@@ -281,3 +281,28 @@ padding:4px 8px;
     background-color: #c50f0f;
     
   }
+
+  #mynote{
+    width:60%;
+    bottom:0px;
+    left:23%;
+    position: fixed;
+    background-color: #c50f0f;
+    z-index: 10;
+    color:#d9d9d9;
+    height:40px;
+    padding:5px;
+    box-shadow: 0 0px 15px 0 #d40d0da0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+    overflow: auto;
+    overflow-y: hidden;
+    white-space: nowrap;scrollbar-width: thin;
+    text-align: center;
+  }
+#mynote::-webkit-scrollbar{height:10px;}
+#mynote::-webkit-scrollbar-thumb{
+    background-color:#a7a7a766;
+    border: 2px solid #2a2a2a;
+border-radius: 5px;}
+#mynote::-webkit-scrollbar-track{background-color:#2a2a2a;}
