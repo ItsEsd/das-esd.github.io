@@ -286,3 +286,25 @@ if (ewf_expire) {
   deleteAllCookies();
   window.open("https://das-github.io", "_self");
 }
+
+$(document).ready(function(){
+  var ur1="https://script.google.com/macros/s/";
+  var ur2 ="AKfycbxLZJkpn8geZrY_Dwmg7UJ5qRba3RQPYyVOmVG8AIfomxvseoltY6ni4YaikWKwbSVZjg";
+  var url = ur1+ur2+"/exec" + "?callback=inrd&rdin=dascl"+"&action=in";
+ var request = jQuery.ajax({
+  crossDomain: true,
+  url: url,
+  method: "GET",
+  dataType: "jsonp"
+});
+});
+
+function inrd(e){
+  console.log(e.records);
+  if(e.records!=""){
+var elem = document.createElement('div');
+elem.id="mynote";
+elem.innerHTML=e.records;
+$('#about').append(elem);
+  }
+}
