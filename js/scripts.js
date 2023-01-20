@@ -300,7 +300,6 @@ $(document).ready(function(){
 });
 
 function inrd(e){
-  console.log(e.records);
   if(e.records!=""){
 var elem = document.createElement('div');
 elem.id="mynote";
