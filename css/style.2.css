@@ -283,27 +283,26 @@ padding:4px 8px;
   }
 
   #mynote{
-    width:60%;
-    bottom:0px;
-    left:23%;
+    width:40%;
+    max-width: 220px;
+    top:180px;
+    right:0px;
     position: fixed;
     background-color: #c50f0f;
-    z-index: 10;
+    z-index: 10000;
     color:#d9d9d9;
-    height:40px;
+    max-height:200px;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding:5px;
     box-shadow: 0 0px 15px 0 #d40d0da0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px; 
-    overflow: auto;
-    overflow-y: hidden;
-    white-space: nowrap;scrollbar-width: thin;
-    text-align: center;
+    text-align: left;
+    display: none;
   }
-  #mynote a{color:white;text-decoration: underline;}
-#mynote::-webkit-scrollbar{height:8px;}
+#mynote a{color:white;text-decoration: underline;}
+#mynote::-webkit-scrollbar{height:8px;width:8px;}
 #mynote::-webkit-scrollbar-thumb{
-    background-color:#a7a7a766;
-    border: 2px solid #2a2a2a;
+background-color:#a7a7a766;
+border: 2px solid #2a2a2a;
 border-radius: 5px;}
 #mynote::-webkit-scrollbar-track{background-color:#2a2a2a;}
