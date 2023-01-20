@@ -234,7 +234,7 @@ function loadaudio(){
       var d = new Date();
       d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
       var expires = "expires=" + d.toUTCString();
-      document.cookie = "_dfunc="+uid+"; expires=" + expires + ";path=/;domain=soubhikdas.in";
+      document.cookie = "_dfunc="+uid+"; expires=" + expires + ";path=/;domain=127.0.0.1";
       // setTimeout(loadaudio(),1000) ;
       loadaudio()
     };
@@ -260,7 +260,7 @@ function deleteAllCookies() {
       var cookie = cookies[i];
       var eqPos = cookie.indexOf("=");
       var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-      document.cookie = name + "=true;"+"expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=soubhikdas.in";
+      document.cookie = name + "=true;"+"expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=127.0.0.1";
   }
   setTimeout(function(){location.reload();},2000);
 }   
@@ -307,3 +307,23 @@ elem.innerHTML=e.records;
 $('#about').append(elem);
   }
 }
+
+window.onscroll = function() {scrollFunction();};
+function scrollFunction(){
+
+    if($(window).width()<1440){
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop >100) {
+
+      $('#mynote').slideDown('slow');
+    }
+    else{
+      $('#mynote').slideUp('slow');
+    }
+   
+  } 
+}
+$(document).ready(function fixdfun(){
+  if($(window).width()>1440){
+    $('#mynote').slideDown();
+  }
+  });
