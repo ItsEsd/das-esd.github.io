@@ -529,9 +529,9 @@ video {
     }
 }
 .footleft{
-	top:0px;
-	right:10px;
-	position: absolute;
+	bottom:10px;
+	left:10px;
+	position: fixed;
 	cursor: pointer;
     z-index: 20000;
 }
@@ -540,8 +540,8 @@ video {
 background-color: #b4b4b4;
 }
 .footleft svg{
-width:24px;
-height:24px;
+width:30px;
+height:30px;
 }
 button{
     border:0px;
