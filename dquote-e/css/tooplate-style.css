@@ -2,7 +2,6 @@
 
 Template 2100 Artist
 
-http://www.tooplate.com/view/2100-artist
 
 */
 
@@ -148,8 +147,11 @@ a:hover, a:active, a:focus {
   padding-bottom: 80px;
 }
 footer{
-  position: relative;
-  padding-top: 40px;
+  bottom:0px;
+  left:0px;
+  width: 100%;
+  position: fixed;
+  padding-top: 20px;
   padding-bottom: 40px;
 }
 
@@ -217,7 +219,7 @@ footer{
   height: 75vh;
   text-align: center;
   position: relative;
-  margin: 82px 12px 0 12px;
+  margin: 40px 12px 0 12px;
 }
 
 .home-wrapper {
@@ -332,7 +334,7 @@ footer{
 -----------------------------------------*/
 
 footer {
-  background: #000000;
+  background: #151515;
 }
 
 footer h4 {
