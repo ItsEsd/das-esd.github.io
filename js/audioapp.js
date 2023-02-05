@@ -14,7 +14,11 @@
   var tracks,thumbnails,trackArtists,trackTitles;
   trackIndex = 0;
   tracks = [
-    
+    /* 3rd Update - Sec -1 */ 
+
+
+
+
   /* 2nd Update- Sec-1*/
   
   "../audios/files/audio/bng/rabindra-ad/2AMER_JABER_SOMOY.MP3",
@@ -224,6 +228,9 @@
     "../audios/files/audio/oth/Wholeness.mp3",
   ];
   thumbnails = [
+  /* 3rd Update - Sec -1 */ 
+
+
   /* 2nd Update- Sec-1*/
   
   "../audios/files/image/b-butter.jpeg",
@@ -437,7 +444,9 @@
   "../audios/files/image/b-butter.jpeg",
   "../audios/files/image/b-butter.jpeg"];
   trackArtists = [
-    
+  /* 3rd Update - Sec -1 */   
+
+
   /* 2nd Update- Sec-1*/
   
   "Jhankar",
@@ -649,6 +658,9 @@
   ];
   
   trackTitles = [
+    /* 3rd Update - Sec -1 */ 
+
+    
     /* 2nd Update- Sec-1*/
   "Amar Jabar Somoi",
   "Brozogopi Khele Gori",
