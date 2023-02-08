@@ -141,11 +141,14 @@ function loadaudio(){
   var tois = date.toISOString();
   var flcaldate = tois.substring(0, 10);
   var calendar = new FullCalendar.Calendar(calendarEl, {
-  
+    initialView: 'listYear',
       headerToolbar: {
         left: 'prev,next',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+        right: 'multiMonthYear,dayGridMonth,timeGridDay,listYear'
+      },
+      views: {
+        listYear: { buttonText: 'all events' }
       },
       initialDate: flcaldate,
       navLinks: true, 
