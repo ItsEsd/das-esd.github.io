@@ -331,6 +331,8 @@ width:100%;
 background-color: #c50f0f;
 cursor: pointer;
 color:white;
+font-size:14px;
+padding:2px;
 }
 .textcon{
     text-align: left;
