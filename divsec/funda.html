@@ -205,6 +205,13 @@
   </div>
 </div>
   </section>
+  <section>
+   <center> <div id="coninit">
+      <div id="prcon"></div>
+    <div id="clsprmcn">Continue >></div>
+    </div></center>
+  </section>
+  <center><div id="intros">INTRO</div></center>
   <script>
       $('#newsmag').click(function(){
     $('#quicknews').slideDown('fast');
@@ -213,5 +220,14 @@
 });
 $('#clsnewsbx').click(function(){
     $('#quicknews').slideUp('fast');
+});
+$('#prcon').load('../pages/intro.html');
+$('#clsprmcn').click(function(){
+  $('#coninit').slideUp();
+  $('#prcon').empty()
+});
+$('#intros').click(function(){
+  $('#coninit').slideDown();
+  $('#prcon').load('../pages/intro.html');
 });
   </script>
