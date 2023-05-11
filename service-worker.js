@@ -3,7 +3,7 @@ const CACHE_NAME  = 'DasPG';
 
 /* Add relative URL of all the static content you want to store in
  * cache storage (this will help us use our app offline)*/
-let resourcesToCache = ["/css/styles.css","/css/calendar.css","/js/calendar.js"];
+let resourcesToCache = ["/css/styles.css","/css/calendar.css","/js/calendar.js","/b-talk/css/bootstrap.min.css","/b-talk/css/templatemo-style.css"];
 
 self.addEventListener("install", e=>{
     e.waitUntil(
