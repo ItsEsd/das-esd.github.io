@@ -292,7 +292,7 @@ if (ewf_expire) {
 
 $(document).ready(function(){
   var ur1="https://script.google.com/macros/s/";
-  var ur2 ="AKfycbxLZJkpn8geZrY_Dwmg7UJ5qRba3RQPYyVOmVG8AIfomxvseoltY6ni4YaikWKwbSVZjg";
+  var ur2 ="AKfycbzrDjx9GVQdZcaANV9mVG1xZpWTic2_Z_MYOV9-Hk9vcKkl4iN2INT840wJLcAaEomVMA";
   var url = ur1+ur2+"/exec" + "?callback=inrd&rdin=dascl"+"&action=in";
  var request = jQuery.ajax({
   crossDomain: true,
@@ -305,10 +305,12 @@ $(document).ready(function(){
 function inrd(e){
   if(e.records!=""){
 var elem = document.createElement('div');
+var elem2 = document.getElementById('fetchpsty');
 elem.id="mynote";
-elem.innerHTML=e.records;
+elem.innerHTML=e.record1;
 $('#about').append(elem);
   }
+  elem2.innerHTML=e.record2;
 }
 
 window.onscroll = function() {scrollFunction();};
@@ -330,3 +332,17 @@ $(document).ready(function fixdfun(){
     $('#mynote').slideDown();
   }
   });
+  
+document.getElementById("openModalBtn").addEventListener("click", function() {
+  document.getElementById("mypost").style.display = "block";
+});
+
+document.getElementsByClassName("closepst")[0].addEventListener("click", function() {
+  document.getElementById("mypost").style.display = "none";
+});
+window.addEventListener("click", function(event) {
+  var modal = document.getElementById("mypost");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
