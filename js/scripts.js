@@ -292,7 +292,7 @@ if (ewf_expire) {
 
 $(document).ready(function(){
   var ur1="https://script.google.com/macros/s/";
-  var ur2 ="AKfycbzrDjx9GVQdZcaANV9mVG1xZpWTic2_Z_MYOV9-Hk9vcKkl4iN2INT840wJLcAaEomVMA";
+  var ur2 ="AKfycbwNnSQYiSFV96d2PdJBOCBl-trJ1b5bzng2xYpNgelDB5mmhBu_CJm36IsWSMFIkNQgKg";
   var url = ur1+ur2+"/exec" + "?callback=inrd&rdin=dascl"+"&action=in";
  var request = jQuery.ajax({
   crossDomain: true,
