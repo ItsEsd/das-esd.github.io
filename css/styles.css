@@ -10024,6 +10024,7 @@ p.lead {
   font-weight: 800;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+  color: #2e2e2e;
 }
 #sideNav .navbar-toggler:focus {
   outline-color: #d48a6e;
@@ -10048,7 +10049,7 @@ p.lead {
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
     max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border: 0.5rem solid rgba(14, 16, 19, 0.2);
   }
   #sideNav .navbar-collapse {
     display: flex;
