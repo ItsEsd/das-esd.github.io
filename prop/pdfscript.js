@@ -22,7 +22,7 @@ else if(r=="true" && chkfltyp.length==1){
 
 
 document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-    var adobeDCView = new AdobeDC.View({clientId: "0ca26a1481fc4748a3eddf1a4b17d046", divId: "adobe-view"});
+    var adobeDCView = new AdobeDC.View({clientId: "0ca26a1481fc4748a3eddf1a4b17d046", divId: "adobe-dc-view"});
     adobeDCView.previewFile({
         content:{location: {url: f_url}},
         metaData:{fileName: f_meta}
@@ -75,4 +75,4 @@ function createForm() {
     document.getElementById("formContainer").appendChild(form);
   }
  
-setInterval(function(){console.clear();},500);
+// setInterval(function(){console.clear();},500);
