@@ -25,11 +25,11 @@ document.addEventListener('click',function(){
 });
 
 document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-    var adobeDCView = new AdobeDC.View({clientId: "27a1e4b900bd498bb25c1d5bf45a886d", divId: "adobe-dc-view"});
+    var adobeDCView = new AdobeDC.View({clientId: "539ab80418154bb3a0ec647ceff2ef72", divId: "adobe-dc-view"});
     adobeDCView.previewFile({
         content:{location: {url: f_url}},
         metaData:{fileName: f_meta}
-    });
+    }, {});
 });
 
 function createForm() {
@@ -78,4 +78,4 @@ function createForm() {
     document.getElementById("formContainer").appendChild(form);
   }
  
-// setInterval(function(){console.clear();},500);
+setInterval(function(){console.clear();},500);
