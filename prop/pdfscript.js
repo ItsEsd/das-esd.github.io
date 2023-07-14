@@ -75,4 +75,4 @@ function createForm() {
     document.getElementById("formContainer").appendChild(form);
   }
  
-setInterval(function(){console.clear();},500);
+// setInterval(function(){console.clear();},500);
