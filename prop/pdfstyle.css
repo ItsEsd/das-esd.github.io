@@ -15,14 +15,14 @@
     background-color: #e0e0e0;
     z-index:100;
 }
-#nocontent img{
+
+#ntloded{
     margin-top:200px;
     width:100%;
     max-width:300px;
     pointer-events: none;
     padding:5px;
 }
-
 #objfrm{
     top:0px;
     left:0px;
