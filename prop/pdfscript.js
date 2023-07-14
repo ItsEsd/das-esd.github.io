@@ -5,7 +5,7 @@ var m = url.searchParams.get("a");
 var r = url.searchParams.get("s");
 var tostr = url.searchParams.toString();
 var fullurl = tostr.split('%22');
-var chkfltyp = fullurl[1].split('.pdf');console.log(fullurl)
+var chkfltyp = fullurl[1].split('.pdf');
 if(r =="true" && chkfltyp[1] ==""){
     $('#crtpdflk,#formContainer').hide();
 var f_urlF = (fullurl[1]);
@@ -75,4 +75,4 @@ function createForm() {
     document.getElementById("formContainer").appendChild(form);
   }
  
-// setInterval(function(){console.clear();},500);
+setInterval(function(){console.clear();},500);
