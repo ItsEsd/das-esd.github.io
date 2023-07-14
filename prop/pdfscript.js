@@ -63,7 +63,7 @@ function createForm() {
       var value1 = escape('"'+input1.value+'"');
       var value2 = "&a="+escape(input2.value);
       var value3 = "&s=true";
-      var result = "https://soubhikdas.in/prop/pdfviewer/?d="+value1 + value2+value3;
+      var result = "https://soubhikdas.in/prop/pdfviewer?d="+value1 + value2+value3;
       var input3 = document.createElement("input");
       input3.type = "text";
       input3.id = "resltlk";
