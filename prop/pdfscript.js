@@ -12,6 +12,7 @@ var f_urlF = (fullurl[1]);
 var f_url = unescape(f_urlF.replace('+'," "));
 var f_meta = m;
 document.title= f_meta +" | DasLive";
+
 }
 else if(r=="true" && chkfltyp.length==1){  
     $('#crtpdflk,#formContainer').hide();
@@ -19,7 +20,9 @@ else if(r=="true" && chkfltyp.length==1){
     document.getElementById('objcont').innerHTML="<object data='"+unescape(chkfltyp[0])+"' id='objfrm'></object>";
     var f_meta = m;document.title= f_meta +" | DasLive";
 }
-
+document.addEventListener('click',function(){ 
+    window.open(f_url,'_blank');
+});
 
 document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
     var adobeDCView = new AdobeDC.View({clientId: "0ca26a1481fc4748a3eddf1a4b17d046", divId: "adobe-dc-view"});
