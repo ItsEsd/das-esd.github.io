@@ -5,22 +5,23 @@ var m = url.searchParams.get("a");
 var r = url.searchParams.get("s");
 var tostr = url.searchParams.toString();
 var fullurl = tostr.split('%22');
-var chkfltyp = fullurl[1].split('.pdf');
+var chkfltyp = fullurl[1].split('.pdf');console.log(fullurl)
 if(r =="true" && chkfltyp[1] ==""){
-    $('#crtpdflk').hide();
+    $('#crtpdflk,#formContainer').hide();
 var f_urlF = (fullurl[1]);
 var f_url = unescape(f_urlF.replace('+'," "));
 var f_meta = m;
 document.title= f_meta +" | DasLive";
 }
-else if(r=="true" && chkfltyp.length==1){  $('#crtpdflk').hide();
+else if(r=="true" && chkfltyp.length==1){  
+    $('#crtpdflk,#formContainer').hide();
     $('#objcont').show();
     document.getElementById('objcont').innerHTML="<object data='"+unescape(chkfltyp[0])+"' id='objfrm'></object>";
-    var f_meta = m;document.title= f_meta +" | DasLive";;
+    var f_meta = m;document.title= f_meta +" | DasLive";
 }
 
 document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-    var adobeDCView = new AdobeDC.View({clientId: "0ca26a1481fc4748a3eddf1a4b17d046", divId: "adobe-view"});
+    var adobeDCView = new AdobeDC.View({clientId: "0ca26a1481fc4748a3eddf1a4b17d046", divId: "adobe-dc-view"});
     adobeDCView.previewFile({
         content:{location: {url: f_url}},
         metaData:{fileName: f_meta}
@@ -74,4 +75,4 @@ function createForm() {
     document.getElementById("formContainer").appendChild(form);
   }
  
-setInterval(function(){console.clear();},500);
+// setInterval(function(){console.clear();},500);
