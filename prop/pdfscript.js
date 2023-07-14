@@ -25,7 +25,7 @@ document.addEventListener('click',function(){
 });
 
 document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-    var adobeDCView = new AdobeDC.View({clientId: "539ab80418154bb3a0ec647ceff2ef72", divId: "adobe-dc-view"});
+    var adobeDCView = new AdobeDC.View({clientId: "42a6ed502ff6469caecf4c3da1fecbff", divId: "adobe-dc-view"});
     adobeDCView.previewFile({
         content:{location: {url: f_url}},
         metaData:{fileName: f_meta}
