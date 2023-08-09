@@ -79,12 +79,37 @@
 
   ////////////////////////////////////////////
 
+// Get general device information
+const userAgent = navigator.userAgent;
+const platform = navigator.platform;
+const language = navigator.language;
+
+// Get screen dimensions
+const screenWidth = window.screen.width;
+const screenHeight = window.screen.height;
+
+// Get browser information
+const browserName = navigator.appName;
+const browserVersion = navigator.appVersion;
+
+// Initialize device details object
+const deviceDetails = {
+  userAgent,
+  platform,
+  language,
+  screenWidth,
+  screenHeight,
+  browserName,
+  browserVersion
+};
+
+// Get device location
+
+  var dvcinf = JSON.stringify(deviceDetails);
   var ur1= "https://script.google.com/macros/s/";
-  var ur2 = "AKfycbzJAiZhlgd8X8TbMEXANxL-wgLBylCUPOYn3cZF-QaY33C_kx9MelRzJqqK8g7mV-C8";
+  var ur2 = "AKfycbxH8TP8wM4EqAu2Ssa3vfz2BzIzgcBgDj8ZUhT-vpLkWJh4ymyJiT6lgnUvJVgg28xt";
   var urlv = ur1+ur2+'/exec';
-var dtstr = new Date();
-// var dtstr = date.toISOString();
-// var dtstr = tois.substring(0, 10);
+  var dtstr = new Date();
   inlivefrm.addEventListener('submit', (event)=>{
     document.getElementById('subinlv').disabled= true;
      liveond();
@@ -92,7 +117,7 @@ var dtstr = new Date();
 function liveond(){
   var glid = $("#glddid").val(); 
   var ddid = $("#justpass").val(); 
-  var url = urlv +"?callback=ldprevd&glid="+glid+"&ddid="+ddid+"&timestp="+dtstr+"&action=chinlv";
+  var url = urlv +"?callback=ldprevd&glid="+glid+"&ddid="+ddid+"&timestp="+dtstr+"&dvcinf="+dvcinf+"&action=chinlv";
   var request = jQuery.ajax({
     crossDomain: true,
     url: url,
@@ -182,7 +207,7 @@ function loadaudio(){
      var glid = $("#glddid").val(); 
      var ddid = $("#justpass").val(); 
            var ur1="https://script.google.com/macros/s/";
-           var ur2 ="AKfycbzJAiZhlgd8X8TbMEXANxL-wgLBylCUPOYn3cZF-QaY33C_kx9MelRzJqqK8g7mV-C8";
+           var ur2 ="AKfycbxH8TP8wM4EqAu2Ssa3vfz2BzIzgcBgDj8ZUhT-vpLkWJh4ymyJiT6lgnUvJVgg28xt";
            var url = ur1+ur2+"/exec" + "?callback=ctrlqevsv&glid=" + glid + "&ddid=" + ddid + "&event=" + evnt + "&action=upevnt";
            var request = jQuery.ajax({
             crossDomain: true,
@@ -204,7 +229,7 @@ function loadaudio(){
   var glid = $("#glddid").val(); 
   var ddid = $("#justpass").val(); 
           var ur1="https://script.google.com/macros/s/";
-           var ur2 ="AKfycbzJAiZhlgd8X8TbMEXANxL-wgLBylCUPOYn3cZF-QaY33C_kx9MelRzJqqK8g7mV-C8";
+           var ur2 ="AKfycbxH8TP8wM4EqAu2Ssa3vfz2BzIzgcBgDj8ZUhT-vpLkWJh4ymyJiT6lgnUvJVgg28xt";
            var url = ur1+ur2+"/exec" + "?callback=ctrlqevrmv&glid=" + glid + "&ddid=" + ddid + "&event=" + delitm + "&action=rmvevnt";
           var request = jQuery.ajax({
            crossDomain: true,
