@@ -464,7 +464,8 @@
               }
               #fetchpsty hr{
                 width:100%;
-                border-color: #f1f1f1;
+                border-width:2px;
+                border-color: #d2d2d2;
               }
               #dqtfrm{
                 border:0px;
