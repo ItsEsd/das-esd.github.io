@@ -475,6 +475,18 @@
                 padding:0px;
                 margin:0px;
               }
-.intialcon{
-  word-wrap: break-word !important;
-}
+          .intialcon{
+            word-wrap: break-word !important;
+          }
+          .rfrshpst{
+          color: #aaa;
+          cursor:pointer;
+          font-size: 12px;
+          }
+
+          .rfrshpst:hover,
+          .rfrshpst:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+          }

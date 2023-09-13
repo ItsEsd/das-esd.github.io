@@ -315,7 +315,8 @@ if (ewf_expire) {
   window.open("https://das-github.io", "_self");
 }
 
-$(document).ready(function(){
+$(document).ready(
+  function loadartpst(){
   var ur1="https://script.google.com/macros/s/";
   var ur2 ="AKfycbyaZsNVNK0pJvdIklbNovWZ0Ya6pl7bhxmuMM9XkfsLH-P_2-Xz6Pfnc7DFN4En7HmvEQ";
   var url = ur1+ur2+"/exec" + "?callback=inrd&rdin=dascl"+"&action=in";
@@ -325,6 +326,10 @@ $(document).ready(function(){
   method: "GET",
   dataType: "jsonp"
 });
+$('.rfrshpst').click(function (){
+  loadartpst();
+  $('#fetchpsty').empty();
+})
 });
 
 function inrd(e){
@@ -359,7 +364,7 @@ $(document).ready(function fixdfun(){
   });
   
 document.getElementById("openModalBtn").addEventListener("click", function() {
-  document.getElementById("mypost").style.display = "block";
+  $('#mypost').show();
 });
 
 document.getElementsByClassName("closepst")[0].addEventListener("click", function() {
