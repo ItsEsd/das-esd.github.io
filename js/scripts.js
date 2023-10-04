@@ -318,7 +318,7 @@ if (ewf_expire) {
 $(document).ready(
   function loadartpst(){
   var ur1="https://script.google.com/macros/s/";
-  var ur2 ="AKfycbyaZsNVNK0pJvdIklbNovWZ0Ya6pl7bhxmuMM9XkfsLH-P_2-Xz6Pfnc7DFN4En7HmvEQ";
+  var ur2 ="AKfycbxc6Ljdrah_Y32syw7bILdTQoevZ39VpGfNztpq1l18JN_d4njnTWcw3nQne99TN_6cKw";
   var url = ur1+ur2+"/exec" + "?callback=inrd&rdin=dascl"+"&action=in";
  var request = jQuery.ajax({
   crossDomain: true,
@@ -341,6 +341,25 @@ elem.innerHTML=e.record1;
 $('#about').append(elem);
   }
   elem2.innerHTML=e.record2;
+  document.getElementById('sectutor').style.display='block';
+document.getElementById('sectutor').addEventListener('click', function() {
+  var newDiv = document.createElement('div');
+  var predv = document.getElementById('tutrldiv');
+  if (predv !== null) {
+    predv.remove(); 
+    newDiv.id="tutrldiv";
+} 
+  newDiv.id="tutrldiv";
+  newDiv.innerHTML = e.record3;
+  var closeButton = document.createElement('button');
+  closeButton.id="clstutrl";
+  closeButton.innerHTML = "<span style='float:left;'>&#9997; Tutorials  | by Soubhik Das</span><span style='float:right;'>Close</span>";
+  closeButton.addEventListener('click', function() {
+      document.body.removeChild(newDiv);
+  });
+  newDiv.appendChild(closeButton);
+  document.body.append(newDiv);
+});
 }
 
 window.onscroll = function() {scrollFunction();};
