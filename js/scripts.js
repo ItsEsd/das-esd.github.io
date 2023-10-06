@@ -353,6 +353,15 @@ document.getElementById('sectutor').addEventListener('click', function() {
   newDiv.innerHTML = e.record3;
   var closeButton = document.createElement('button');
   closeButton.id="clstutrl";
+  closeButton.style.position = 'fixed';
+  closeButton.style.bottom = '0';
+  closeButton.style.left = '0';
+  closeButton.style.width = '100%';
+  closeButton.style.height = '5vh';
+  closeButton.style.border = '0px';
+  closeButton.style.backgroundColor = '#c50f0f';
+  closeButton.style.color = 'white';
+  closeButton.style.zIndex = '20000';
   closeButton.innerHTML = "<span style='float:left;'>&#9997; Tutorials & Ref. | by Soubhik Das</span><span style='float:right;'>Close</span>";
   closeButton.addEventListener('click', function() {
       document.body.removeChild(newDiv);
