@@ -513,6 +513,7 @@
             border:0px;
             background-color: #c50f0f;
             color:white;
+            z-index:20000;
           }
           #clstutrl:active,#clstutrl:focus{
             outline:none;
