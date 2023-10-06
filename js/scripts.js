@@ -353,7 +353,7 @@ document.getElementById('sectutor').addEventListener('click', function() {
   newDiv.innerHTML = e.record3;
   var closeButton = document.createElement('button');
   closeButton.id="clstutrl";
-  closeButton.innerHTML = "<span style='float:left;'>&#9997; Tutorials  | by Soubhik Das</span><span style='float:right;'>Close</span>";
+  closeButton.innerHTML = "<span style='float:left;'>&#9997; Tutorials & Ref. | by Soubhik Das</span><span style='float:right;'>Close</span>";
   closeButton.addEventListener('click', function() {
       document.body.removeChild(newDiv);
   });
