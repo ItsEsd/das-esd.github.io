@@ -365,8 +365,9 @@ document.getElementById('sectutor').addEventListener('click', function() {
   closeButton.innerHTML = "<span style='float:left;'>&#9997; Tutorials & Ref. | by Soubhik Das</span><span style='float:right;'>Close</span>";
   closeButton.addEventListener('click', function() {
       document.body.removeChild(newDiv);
+      document.body.removeChild(closeButton);
   });
-  newDiv.appendChild(closeButton);
+  document.body.append(closeButton);
   document.body.append(newDiv);
 });
 }
