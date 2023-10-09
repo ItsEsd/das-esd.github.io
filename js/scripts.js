@@ -345,9 +345,10 @@ $('#about').append(elem);
 document.getElementById('sectutor').addEventListener('click', function() {
   var newDiv = document.createElement('div');
   var predv = document.getElementById('tutrldiv');
+  var clsprdv = document.getElementById('clstutrl');
   if (predv !== null) {
-    predv.remove(); 
-    newDiv.id="tutrldiv";
+    predv.remove(); clsprdv.remove(); 
+    newDiv.id="tutrldiv";clsprdv.id="clstutrl";
 } 
   newDiv.id="tutrldiv";
   newDiv.innerHTML = e.record3;
