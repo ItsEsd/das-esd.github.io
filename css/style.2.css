@@ -420,6 +420,7 @@
               }
               .modalcn-content a:hover{
                 opacity: 0.5;
+                z-index: 0;
               }
               .closepst {
                 color: #aaa;
@@ -444,6 +445,7 @@
                 background-color: #f1f1f1;
                 padding: 10px;
                 font-size: 16px;
+                z-index: 1;
               }
               #fetchpsty{
                 padding: 10px;
