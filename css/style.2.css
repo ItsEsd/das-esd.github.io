@@ -283,8 +283,8 @@
         }
 
         #mynote{
-        width:40%;
-        max-width: 220px;
+        width:70%;
+        max-width: 300px;
         top:180px;
         right:0px;
         position: fixed;
@@ -292,7 +292,7 @@
         z-index: 10000;
         color:#d9d9d9;
         max-height:200px;
-        overflow-y: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
         padding:5px;
         box-shadow: 0 0px 15px 0 #d40d0da0;
@@ -562,4 +562,8 @@
             font-weight: 500;
             border-bottom-left-radius: 10px;
             border-top-left-radius: 10px;
+          }
+          #shwmnote:hover{
+            padding-right:10px;
+            background-color: #c6c6c6;
           }
