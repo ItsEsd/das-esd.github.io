@@ -528,3 +528,37 @@
           #sectutor a:hover{
             text-decoration: underline;
           }
+
+          #clsmynt{
+            bottom:0px;
+            left:0px;
+            padding:0px;
+            width:100%;
+            font-size:20px;
+            position: sticky;
+            text-align: center;
+            background-color: black;
+            cursor:pointer;
+          }
+          #clsmynt:hover{
+            background-color: #242424;
+          }
+          #opnote{
+            padding-bottom:20px;
+          }
+          #shwmnote{
+            display: none;
+            cursor: pointer;
+            top:200px;
+            right:0px;
+            position: fixed;
+            padding:5px;
+            background-color: #e3e3e3;
+            color:black;
+            text-orientation: sideways;
+            line-height: 80px;
+            font-size: 40px;
+            font-weight: 500;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+          }

@@ -337,8 +337,8 @@ function inrd(e){
 var elem = document.createElement('div');
 var elem2 = document.getElementById('fetchpsty');
 elem.id="mynote";
-elem.innerHTML=e.record1;
-$('#about').append(elem);
+elem.innerHTML='<div id="opnote">'+e.record1+'</div><div id="clsmynt" onclick="showntbtn(this);">&times;</div>';
+$('#about').append(elem); document.getElementById('shwmnote').style.display='block';
   }
   elem2.innerHTML=e.record2;
   document.getElementById('sectutor').style.display='block';
@@ -372,21 +372,24 @@ document.getElementById('sectutor').addEventListener('click', function() {
   document.body.append(newDiv);
 });
 }
-
-window.onscroll = function() {scrollFunction();};
-function scrollFunction(){
-
-    if($(window).width()<1440){
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop >100) {
-
-      $('#mynote').slideDown('slow');
-    }
-    else{
-      $('#mynote').slideUp('slow');
-    }
-   
-  } 
+function showntbtn(){
+  $('#mynote').hide();
 }
+window.onscroll = function() {scrollFunction();};
+
+// function scrollFunction(){
+
+//     if($(window).width()<1440){
+//       if (document.body.scrollTop > 100 || document.documentElement.scrollTop >100) {
+
+//       $('#shwmnote').slideDown('slow');
+//     }
+//     else{
+//       $('#shwmnote').slideUp('slow');
+//     }
+   
+//   } 
+// }
 $(document).ready(function fixdfun(){
   if($(window).width()>1440){
     $('#mynote').slideDown();
