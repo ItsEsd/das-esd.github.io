@@ -298,6 +298,7 @@
         box-shadow: 0 0px 15px 0 #d40d0da0;
         text-align: left;
         display: none;
+        word-wrap: break-word !important;
         }
         #mynote a{color:white;text-decoration: underline;}
         #mynote::-webkit-scrollbar{height:8px;width:8px;}
