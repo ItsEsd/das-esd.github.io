@@ -337,7 +337,7 @@ function inrd(e){
 var elem = document.createElement('div');
 var elem2 = document.getElementById('fetchpsty');
 elem.id="mynote";
-elem.innerHTML='<div id="opnote">'+e.record1+'</div><div id="clsmynt" onclick="showntbtn(this);">&times;</div>';
+elem.innerHTML='<div id="opnote">'+e.record1+'</div><div id="clsmynt" onclick="showntbtn(this);">CLOSE</div>';
 $('#about').append(elem); document.getElementById('shwmnote').style.display='block';
   }
   elem2.innerHTML=e.record2;
