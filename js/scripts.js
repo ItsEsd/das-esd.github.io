@@ -373,7 +373,7 @@ document.getElementById('sectutor').addEventListener('click', function() {
 });
 }
 function showntbtn(){
-  $('#mynote').hide();
+  $('#mynote').hide();$('#shwmnote').show('fast');
 }
 window.onscroll = function() {scrollFunction();};
 
