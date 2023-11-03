@@ -557,11 +557,9 @@
             top:200px;
             right:0px;
             position: fixed;
-            padding:20px 5px 20px 5px;
+            padding:30px 5px 30px 5px;
             background-color: #e3e3e3;
             color:black;
-            font-size: 40px;
-            font-weight: 500;
             border-bottom-left-radius: 10px;
             border-top-left-radius: 10px;
           }
@@ -569,5 +567,11 @@
             padding-right:10px;
             background-color: #c6c6c6;
             transition: 0.1s;
-
           }
+
+        #shwmnote span{
+            font-size: 20px;
+            letter-spacing: 10px;
+            font-weight: 600;
+            line-height: 2;
+        }
