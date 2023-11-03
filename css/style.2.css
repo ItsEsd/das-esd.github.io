@@ -535,11 +535,15 @@
             left:0px;
             padding:0px;
             width:100%;
-            font-size:20px;
+            font-size:14px;
+            padding:5px;
             position: sticky;
             text-align: center;
             background-color: black;
             cursor:pointer;
+          }
+          #clsmynt span{
+            font-size:14px;
           }
           #clsmynt:hover{
             background-color: #242424;
@@ -553,11 +557,9 @@
             top:200px;
             right:0px;
             position: fixed;
-            padding:5px;
+            padding:20px 5px;
             background-color: #e3e3e3;
             color:black;
-            text-orientation: sideways;
-            line-height: 80px;
             font-size: 40px;
             font-weight: 500;
             border-bottom-left-radius: 10px;
@@ -566,4 +568,6 @@
           #shwmnote:hover{
             padding-right:10px;
             background-color: #c6c6c6;
+            transition: 0.1s;
+
           }
