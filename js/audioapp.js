@@ -474,8 +474,6 @@
   "../audios/files/image/b-butter.jpeg",
   "../audios/files/image/b-butter.jpeg",
   "../audios/files/image/b-butter.jpeg",
-  "../audios/files/image/b-butter.jpeg",
-  "../audios/files/image/b-butter.jpeg",
   
 
   /* 2nd Update- Sec-1*/
@@ -758,8 +756,6 @@
 
 
   /* 3rd Update - Sec -1 */   
-  "NA",
-  "NA",
   "NA",
   "NA",
   "NA",
