@@ -375,21 +375,7 @@ document.getElementById('sectutor').addEventListener('click', function() {
 function showntbtn(){
   $('#mynote').hide();$('#shwmnote').show('fast');
 }
-window.onscroll = function() {scrollFunction();};
 
-// function scrollFunction(){
-
-//     if($(window).width()<1440){
-//       if (document.body.scrollTop > 100 || document.documentElement.scrollTop >100) {
-
-//       $('#shwmnote').slideDown('slow');
-//     }
-//     else{
-//       $('#shwmnote').slideUp('slow');
-//     }
-   
-//   } 
-// }
 $(document).ready(function fixdfun(){
   if($(window).width()>1440){
     $('#mynote').slideDown();
@@ -409,3 +395,4 @@ window.addEventListener("click", function(event) {
     modal.style.display = "none";
   }
 });
+

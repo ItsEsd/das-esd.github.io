@@ -163,23 +163,23 @@
         }
 
         #about{
-        background-image: url('../assets/img/sectCover/about.jpg');
+        background-image: url('../assets/img/sectCover/sd.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         color:#dad8d8; 
         }
         #dasesd{
-        background-image: url('../assets/img/sectCover/esddot.jpeg');
+        background-image: url('../assets/img/sectCover/esd.jpg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         }
         #mwfbiz{
-        background-image: url('../assets/img/sectCover/projects.jpg');
+        background-image: url('../assets/img/sectCover/bs.jpg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         }
         #dsonic{
-        background-image: url('../assets/img/sectCover/dsonic.jpg');
+        background-image: url('../assets/img/sectCover/ds.jpg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         }
@@ -575,3 +575,15 @@
             font-weight: 600;
             line-height: 2;
         }
+
+      
+        #bottomDiv details{
+          text-align: left;
+          font-size: 12px;
+          line-height: 1.5;
+          margin-top:30px;
+          color:#ffffff;
+          width: 90%;
+        }
+
+       
