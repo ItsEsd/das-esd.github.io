@@ -1,317 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Audios AP #2 - Das Live @ItsEsD</title>
+    <title>Audios AP #2 - Soubhik Das @ItsEsD</title>
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.jpg" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
     <script>
-function GetCookie(cname) {
-      var name = cname + "="; 
-        var decodedCookie = decodeURIComponent(document.cookie); 
-        var ca = decodedCookie.split(';'); 
+      function GetCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(";");
         for (var i = 0; i < ca.length; i++) {
-           var c = ca[i]; while (c.charAt(0) == ' ') { c = c.substring(1); } 
-           if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); } 
-          } return "";
-    }
- var useru = GetCookie("_dfunc"); 
-    if(useru ==''){
-      window.open("https://soubhikdas.in", "_self");
-    }
+          var c = ca[i];
+          while (c.charAt(0) == " ") {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+      var useru = GetCookie("_dfunc");
+      if (useru == "") {
+        window.open("https://soubhikdas.in", "_self");
+      }
     </script>
-   </head>
-   <style>
-    
-#background {
-    object-fit: cover;
-    height: 100vh;
-    width: 100vw;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    filter: blur(7px);
-    z-index: -1;
-  }
-  
-  .outer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  .player-container {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    height: 400px;
-    width: 325px;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0 0 30px #f94c57;
-  }
-  
-  #thumbnail {
-    position: absolute;
-    object-fit: fill;
-    height: 100%;
-    width: 100%;
-    top: -10%;
-    transition: 1s;
-    z-index: 3;
-  }
-  
-  .box {
-    position: absolute;
-    height: 45%;
-    width: 100%;
-    background: linear-gradient(90deg, rgb(145, 145, 145), rgb(220, 220, 220));
-    z-index: 4;
-    bottom: -10%;
-    display: grid;
-    grid-template-colums: 35px 255px 35px;
-    grid-template-rows: 85px 25px 25px;
-    grid-template-areas:
-      "one two two three"
-      "four four four four"
-      "five five five five";
-    column-gap: 10px;
-  }
-  
-  .play-pause {
-    grid-area: one;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .play-pause #pause{
-    filter: invert(1);
-    cursor: pointer;
-    display: none;
-  }
-  .play-pause svg{
-    width:40px;
-    height:40px;
-  }
-  
-  #play,
-  #prev-track,
-  #next-track {
-    filter: invert(1);
-    cursor: pointer;
-  }
-  
-  .track-info {
-    grid-area: two;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 5%;
-    width:180px;
-    /* border: 1px solid red; */
-  }
-  
-  #track-artist {
-    color: #f94c57;
-    font-family: "Lato", sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
-    text-shadow: 0 0 15px white;
-  }
-  
-  #track-title {
-    color: white;
-    font-family: "Lato", sans-serif;
-    font-size: 0.75em;
-  }
-  
-  .next-prev {
-    grid-area: three;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top:10px;
-    /* border: 1px solid red; */
-  }
-  .next-prev span{
-  margin-bottom:4px;
-  }
-  
-  .progress-bar {
-    grid-area: four;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid red; */
-  }
-  
-  #progressBar {
-    appearance: none;
-    height: 5px;
-    background: white;
-    width: 57.5%;
-    outline: none;
-    border-radius: 30px;
-  }
-  
-  #progressBar::-webkit-slider-thumb {
-    appearance: none;
-    height: 11px;
-    width: 11px;
-    outline: none;
-    background: #f94c57;
-    border-radius: 30px;
-    cursor: pointer;
-  }
-  
-  .track-time {
-    grid-area: five;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    /* border: 1px solid red; */
-  }
-  
-  #currentTime {
-    font-family: "Lato", sans-serif;
-    font-size: 1rem;
-    color: white;
-  }
-  
-  #durationTime {
-    font-family: "Lato", sans-serif;
-    font-size: 1rem;
-    color: #f94c57;
-    text-shadow: 0 0 15px white;
-  }
-  .playcon{
-  padding:5px;
-  border:1px solid #f94c57;
-  cursor:pointer;
-  }
-  .playcon:hover{
-    background-color: #d1d1d1a9;
-  }
-  #playbody{
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #e0e0e0;
-  bottom:60px; 
-    display:none;
-    max-width: 240px;
-    max-height:280px;
-    overflow-y: auto;
-    z-index:10;
-    position: fixed;
-    padding:5px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  #playbody::-webkit-scrollbar{
-    border-radius: 5px;
-    width:6px;
-    background: #4d4d4d;
-  }
-  
-  #playbody::-webkit-scrollbar-thumb{
-    background: #f94c57;
-    border-radius: 5px;
-  }
-  #playlist::-webkit-slider-thumb {
-    appearance: none;
-    height: 11px;
-    width: 11px;
-    outline: none;
-    background: #f94c57;
-    border-radius: 30px;
-    cursor: pointer;
-  }
-  
-  
-  .ttitle{
-  font-size: 16px;
-  font-weight:600;
-  }
-  .tartist{
-    font-size: 14px;
-  font-weight:400;
-  }
-  
-  #otplaylist{
-    background-color:#cecece;
-    padding:4px 6px;
-    bottom:20px;
-    /* left:20px; */
-    border: 0px;
-    position: fixed;
-    cursor:pointer;
-    font-size:20px;
-    outline: none;
-  }
-  #otplaylist:hover{
-    background-color: #afafaf;
-  }
-   </style>
+  </head>
+  <style>
+    #background {
+      object-fit: cover;
+      height: 100vh;
+      width: 100vw;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      filter: blur(7px);
+      z-index: -1;
+    }
+
+    .outer-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .player-container {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      height: 400px;
+      width: 325px;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: 0 0 30px #f94c57;
+    }
+
+    #thumbnail {
+      position: absolute;
+      object-fit: fill;
+      height: 100%;
+      width: 100%;
+      top: -10%;
+      transition: 1s;
+      z-index: 3;
+    }
+
+    .box {
+      position: absolute;
+      height: 45%;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        rgb(145, 145, 145),
+        rgb(220, 220, 220)
+      );
+      z-index: 4;
+      bottom: -10%;
+      display: grid;
+      grid-template-colums: 35px 255px 35px;
+      grid-template-rows: 85px 25px 25px;
+      grid-template-areas:
+        "one two two three"
+        "four four four four"
+        "five five five five";
+      column-gap: 10px;
+    }
+
+    .play-pause {
+      grid-area: one;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .play-pause #pause {
+      filter: invert(1);
+      cursor: pointer;
+      display: none;
+    }
+    .play-pause svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    #play,
+    #prev-track,
+    #next-track {
+      filter: invert(1);
+      cursor: pointer;
+    }
+
+    .track-info {
+      grid-area: two;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 5%;
+      width: 180px;
+      /* border: 1px solid red; */
+    }
+
+    #track-artist {
+      color: #f94c57;
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      text-shadow: 0 0 15px white;
+    }
+
+    #track-title {
+      color: white;
+      font-family: "Lato", sans-serif;
+      font-size: 0.75em;
+    }
+
+    .next-prev {
+      grid-area: three;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 10px;
+      /* border: 1px solid red; */
+    }
+    .next-prev span {
+      margin-bottom: 4px;
+    }
+
+    .progress-bar {
+      grid-area: four;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* border: 1px solid red; */
+    }
+
+    #progressBar {
+      appearance: none;
+      height: 5px;
+      background: white;
+      width: 57.5%;
+      outline: none;
+      border-radius: 30px;
+    }
+
+    #progressBar::-webkit-slider-thumb {
+      appearance: none;
+      height: 11px;
+      width: 11px;
+      outline: none;
+      background: #f94c57;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .track-time {
+      grid-area: five;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      /* border: 1px solid red; */
+    }
+
+    #currentTime {
+      font-family: "Lato", sans-serif;
+      font-size: 1rem;
+      color: white;
+    }
+
+    #durationTime {
+      font-family: "Lato", sans-serif;
+      font-size: 1rem;
+      color: #f94c57;
+      text-shadow: 0 0 15px white;
+    }
+    .playcon {
+      padding: 5px;
+      border: 1px solid #f94c57;
+      cursor: pointer;
+    }
+    .playcon:hover {
+      background-color: #d1d1d1a9;
+    }
+    #playbody {
+      font-family: "Courier New", Courier, monospace;
+      background-color: #e0e0e0;
+      bottom: 60px;
+      display: none;
+      max-width: 240px;
+      max-height: 280px;
+      overflow-y: auto;
+      z-index: 10;
+      position: fixed;
+      padding: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    #playbody::-webkit-scrollbar {
+      border-radius: 5px;
+      width: 6px;
+      background: #4d4d4d;
+    }
+
+    #playbody::-webkit-scrollbar-thumb {
+      background: #f94c57;
+      border-radius: 5px;
+    }
+    #playlist::-webkit-slider-thumb {
+      appearance: none;
+      height: 11px;
+      width: 11px;
+      outline: none;
+      background: #f94c57;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .ttitle {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .tartist {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    #otplaylist {
+      background-color: #cecece;
+      padding: 4px 6px;
+      bottom: 20px;
+      /* left:20px; */
+      border: 0px;
+      position: fixed;
+      cursor: pointer;
+      font-size: 20px;
+      outline: none;
+    }
+    #otplaylist:hover {
+      background-color: #afafaf;
+    }
+  </style>
   <body>
     <div class="outer-container">
-        <img src="" alt="" id="background" />
-        <audio src="" id="track"></audio>
-      </div>
-      
-      <div class="player-container">
-        <img src="" alt="" id="thumbnail" />
-      
-        <div class="box">
-          <div class="play-pause">
-            <span id="play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-              <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
-            </svg></span>
-            <span id="pause"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-pause-circle" viewBox="0 0 16 16">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-              <path d="M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5zm3.5 0a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5z"/>
-            </svg></span>
-          </div>
-          <div class="track-info">
-            <div id="track-artist"></div>
-            <div id="track-title"></div>
-          </div>
-          <div class="next-prev">
-            <span id="prev-track"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
-            </svg></span>
-            <span id="next-track">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-              </svg>
-            </span>
-          </div>
-          <div class="progress-bar">
-            <input type="range" id="progressBar" min="0" max="" value="0" />
-          </div>
-          <div class="track-time">
-            <div id="currentTime"></div>
-            <div id="durationTime"></div>
-          </div>
+      <img src="" alt="" id="background" />
+      <audio src="" id="track"></audio>
+    </div>
+
+    <div class="player-container">
+      <img src="" alt="" id="thumbnail" />
+
+      <div class="box">
+        <div class="play-pause">
+          <span id="play"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-play-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              />
+              <path
+                d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"
+              /></svg
+          ></span>
+          <span id="pause"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-pause-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              />
+              <path
+                d="M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5zm3.5 0a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5z"
+              /></svg
+          ></span>
+        </div>
+        <div class="track-info">
+          <div id="track-artist"></div>
+          <div id="track-title"></div>
+        </div>
+        <div class="next-prev">
+          <span id="prev-track"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-arrow-left-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+              /></svg
+          ></span>
+          <span id="next-track">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-arrow-right-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="progress-bar">
+          <input type="range" id="progressBar" min="0" max="" value="0" />
+        </div>
+        <div class="track-time">
+          <div id="currentTime"></div>
+          <div id="durationTime"></div>
         </div>
       </div>
-      <section>
-        <div id="playlist">
- <div id="playbody"></div>         
-<button id="otplaylist">🎶</button></div>
-</section><script src="../js/audioapp.js"></script>
-</body>
+    </div>
+    <section>
+      <div id="playlist">
+        <div id="playbody"></div>
+        <button id="otplaylist">🎶</button>
+      </div>
+    </section>
+    <script src="../js/audioapp.js"></script>
+  </body>
 </html>
