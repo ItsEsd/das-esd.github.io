@@ -1,92 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>D's @itsEsD</title>
-    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.jpg" />
-    <link rel="stylesheet" href="../fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <!-- https://fonts.google.com/ -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/templatemo-video-catalog.css">
-	<link href="../css/zencdn.min.css" rel="stylesheet" />
-</head>
+    <meta property="og:image" content="/assets/img/das-meta.png" />
+    <meta property="twitter:image" content="/assets/img/das-meta.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.jpg" />
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/templatemo-video-catalog.css" />
+    <link href="../css/zencdn.min.css" rel="stylesheet" />
+  </head>
 
-<body oncontextmenu="return false;">
-	<div class="tm-page-wrap mx-auto">
-		<div class="position-relative">
-			<div class="tm-welcome-container tm-fixed-header tm-fixed-header-1">
-				<div class="text-center">
-					<p id="smvidq" class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 mx-auto">
-					</p>                	
-				</div>                
+  <body oncontextmenu="return false;">
+    <div class="tm-page-wrap mx-auto">
+      <div class="position-relative">
+        <div class="tm-welcome-container tm-fixed-header tm-fixed-header-1">
+          <div class="text-center">
+            <p
+              id="smvidq"
+              class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 mx-auto"
+            ></p>
+          </div>
+        </div>
+
+        <div id="tm-fixed-header-bg"></div>
+      </div>
+
+      <div
+        class="container-fluid"
+        id="pgstart"
+        style="background-color: #222222"
+        oncontextmenu="return false;"
+      >
+        <div class="mx-auto tm-content-container">
+          <main>
+            <div class="row mb-5 pb-4">
+              <div class="col-12 vidcon2">
+                <center>
+                  <video
+                    id="imvid"
+                    controls
+                    controlslist="nodownload"
+                    preload="auto"
+                    poster="../img/bodhuya.jpg"
+                    autoplay
+                    loop
+                  >
+                    <source type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </center>
+              </div>
             </div>
 
-			<!-- Header image -->
-            <div id="tm-fixed-header-bg"></div> 
-		</div>
-
-		<!-- Page content -->
-		<div class="container-fluid" id="pgstart" style="background-color:#222222;" oncontextmenu="return false;">
-			<div class="mx-auto tm-content-container">
-				<main>
-					<div class="row mb-5 pb-4">
-						<div class="col-12 vidcon2"><center>
-							<!-- Video player 1422x800 -->
-
-							<video id="imvid"
-							controls
-                            controlslist="nodownload"
-							preload="auto" 
-							poster="../img/bodhuya.jpg"
-							autoplay loop>
-							  <source  type="video/mp4">							  
-							Your browser does not support the video tag.
-							</video>
-						
-						
-						</center>
-						</div>
-					</div>
-					
-<center>
-	<div class="vidContent">
-	<h2 class="mb-5 tm-video-title" id="vdtitle"></h2></div>
-</center>
-				</main>
-				<footer>
-                    <div style="float:right;">
-						<span  class="footleft"><button onclick="window.open('../','_self');"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
-                            <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
-                            <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
-                          </svg></button></span> 
-                        <a href="mailto:d.soubhik@outlook.com" style="text-decoration: none;font-size:14px;bottom:0px;right:10px;color:#636161;">© DAS</a>    
-                    </div>
-                </footer>
-			</div> 
-		</div>
-	</div>
-	<script src="../js/jquery-3.4.1.min.js"></script>
+            <center>
+              <div class="vidContent">
+                <h2 class="mb-5 tm-video-title" id="vdtitle"></h2>
+              </div>
+            </center>
+          </main>
+          <footer>
+            <div style="float: right">
+              <span class="footleft"
+                ><button onclick="window.open('../','_self');">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="bi bi-person-workspace"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+                    />
+                    <path
+                      d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"
+                    />
+                  </svg></button
+              ></span>
+              <a
+                href="mailto:d.soubhik@outlook.com"
+                style="
+                  text-decoration: none;
+                  font-size: 14px;
+                  bottom: 0px;
+                  right: 10px;
+                  color: #636161;
+                "
+                >© DAS</a
+              >
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-	<script src="../js/zencdn.min.js"></script>
-	<script src="script.js"></script>
+    <script src="../js/zencdn.min.js"></script>
+    <script src="script.js"></script>
     <script>
-    	$(document).ready(function() {
-    		$('.tm-likes-box').click(function(e) {
-    			e.preventDefault();
-    			$(this).toggleClass('tm-liked');
+      $(document).ready(function () {
+        $(".tm-likes-box").click(function (e) {
+          e.preventDefault();
+          $(this).toggleClass("tm-liked");
 
-    			if($(this).hasClass('tm-liked')) {
-    				$('#tm-likes-count').html('486 likes');
-    			} else {
-    				$('#tm-likes-count').html('485 likes');
-    			}
-    		});
-		$('html, body').animate({
-        scrollTop: $("#pgstart").offset().top + 60
-      }, "slow");
-    	});
+          if ($(this).hasClass("tm-liked")) {
+            $("#tm-likes-count").html("486 likes");
+          } else {
+            $("#tm-likes-count").html("485 likes");
+          }
+        });
+        $("html, body").animate(
+          {
+            scrollTop: $("#pgstart").offset().top + 60,
+          },
+          "slow"
+        );
+      });
     </script>
-</body>
+  </body>
 </html>
