@@ -326,7 +326,7 @@ var SetCookie = function (exdays, uid) {
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
   var expires = "expires=" + d.toUTCString();
   document.cookie =
-    "_dfunc=" + uid + "; expires=" + expires + ";path=/;domain=127.0.0.1";
+    "_dfunc=" + uid + "; expires=" + expires + ";path=/;domain=soubhikdas.in";
   // setTimeout(loadaudio(),1000) ;
   loadaudio();
 };
@@ -364,7 +364,7 @@ function deleteAllCookies() {
     document.cookie =
       name +
       "=true;" +
-      "expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=127.0.0.1";
+      "expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=soubhikdas.in";
   }
   setTimeout(function () {
     location.reload();
@@ -496,7 +496,7 @@ function createCookie(name, value, days) {
     expires = "; expires=" + date.toUTCString();
   }
   document.cookie =
-    name + "=" + (value || "") + expires + "; path=/;domain=127.0.0.1";
+    name + "=" + (value || "") + expires + "; path=/;domain=soubhikdas.in";
 }
 
 async function validateForm(event) {
