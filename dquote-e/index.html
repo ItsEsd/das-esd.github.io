@@ -1177,7 +1177,7 @@
       <span
         ><button
           class="footleft"
-          onclick='var elem = document.getElementById("ftstcon");if(elem.style.display=="none"){elem.style.display="block";}else{elem.style.display="none"}'
+          onclick='var elem = document.getElementById("ftstcon");if(window.getComputedStyle(elem).display=="none"){elem.style.display="block";}else{elem.style.display="none"}'
           style="border-radius: 5px; padding: 5px 10px"
         >
           <svg
@@ -1220,7 +1220,9 @@
         <a target="_blank" href="https://soubhikdas.in/audios/"
           >Recordings 🎙️</a
         >
-        <a target="_blank" href="soubhikdas.in/app/audioplayer/?_SSmuse=true"
+        <a
+          target="_blank"
+          href="https://soubhikdas.in/app/audioplayer/?_SSmuse=true"
           >DSonic Music 🎹</a
         ><span
           style="
