@@ -17,6 +17,40 @@
     <link rel="stylesheet" href="slick/slick.min.css" />
     <link rel="stylesheet" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="css/templatemo-upright.css" />
+    <style>
+      #overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        filter: blur(0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        margin-left: -15px;
+        border-radius: 10px;
+        padding: 0px;
+      }
+      #form-container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0px 2px 10px 0px #d7d7d79e;
+      }
+      #content {
+        display: block;
+        filter: blur(10px);
+      }
+      @media screen and (max-width: 769px) {
+        #overlay {
+          margin: 0px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container-fluid">
@@ -58,23 +92,35 @@
                 </li>
 
                 <li class="nav-item">
-                  <a href="#contact" class="nav-link">
-                    <div class="triangle-right"></div>
-                    <i class="fas fa-envelope nav-icon"></i>
-                    Contact
-                  </a>
-                </li>
-                <li class="nav-item">
                   <a
-                    href="../"
+                    href="//info.soubhikdas.in/qubits"
                     class="nav-link external"
-                    target="_parent"
-                    rel="sponsored"
+                    target="_blank"
                   >
                     <div class="triangle-right"></div>
-                    <font size="4"> Soubhikdas.in >> </font>
+                    <i class="fas fa-file-medical-alt nav-icon"></i>
+                    [ QuBits ]
                   </a>
                 </li>
+                <li class="">
+                  <a
+                    href="../dquote-e/"
+                    target="_blank"
+                    class="nav-link external"
+                  >
+                    <div class="triangle-right"></div>
+                    <font size="3">DQoute-E ↗↗</font>
+                  </a>
+                </li>
+
+                <a
+                  href="../"
+                  class="nav-link external"
+                  target="_parent"
+                  rel="sponsored"
+                >
+                  <font size="2"> www.Soubhikdas.in >> </font>
+                </a>
               </ul>
             </div>
           </nav>
@@ -140,7 +186,7 @@
             </section>
           </div>
           <!-- Gallery section -->
-          <div class="tm-section-wrap">
+          <div class="tm-section-wrap" id="dpstry">
             <div
               class="tm-parallax"
               data-parallax="scroll"
@@ -149,6 +195,32 @@
             <section id="gallery" class="tm-section">
               <h2 class="tm-text-primary">Depository</h2>
               <hr class="mb-5" />
+              <div id="overlay">
+                <div id="form-container">
+                  <h2 class="tm-text-primary">Enter Gallery Pass</h2>
+                  <input
+                    type="password"
+                    id="gpass"
+                    placeholder="Enter Pass"
+                    style="
+                      border: 1px solid black;
+                      border-radius: 5px;
+                      outline: none;
+                      padding: 4px;
+                    "
+                  />
+                  <button
+                    onclick="checkPass()"
+                    style="
+                      border: 1px solid black;
+                      border-radius: 5px;
+                      padding: 4px;
+                    "
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
               <ul class="tm-gallery-links">
                 <li>
                   <a
@@ -201,409 +273,412 @@
                   </a>
                 </li>
               </ul>
-              <div class="tm-gallery">
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/2.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/2.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/3.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/3.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/4.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/4.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/5.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/5.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/1.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/1.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/6.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/6.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/7.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/7.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/8.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/8.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/9.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/9.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/10.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/10.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/11.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/11.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/12.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/12.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/13.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/13.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/14.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/14.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/15.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/15.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/16.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/16.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item colleged">
-                  <img src="img/sg/norm/17.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>College Days</i></h2>
-                    <a href="img/sg/norm/17.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf portrait">
-                  <img src="img/sg/norm/18.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/18.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf portrait">
-                  <img src="img/sg/norm/19.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/19.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/20.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/20.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/21.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/21.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf portrait">
-                  <img src="img/sg/norm/22.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/22.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/23.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/23.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/24.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/24.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/25.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/25.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/26.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/26.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/27.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/27.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/28.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/28.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/29.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/29.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/30.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/30.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/31.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/31.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/32.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/32.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf portrait">
-                  <img src="img/sg/norm/33.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/33.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf portrait">
-                  <img src="img/sg/norm/34.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/34.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item fndf">
-                  <img src="img/sg/norm/35.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Family & Friends</i></h2>
-                    <a href="img/sg/norm/35.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/Ayodha/1.JPG" alt="Image" />
-                  <figcaption>
-                    <h2><i>Ajodhya Hills</i></h2>
-                    <a href="img/sg/trip/Ayodha/1.JPG">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/Ayodha/2.JPG" alt="Image" />
-                  <figcaption>
-                    <h2><i>Ajodhya Hills</i></h2>
-                    <a href="img/sg/trip/Ayodha/2.JPG">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/Ayodha/3.JPG" alt="Image" />
-                  <figcaption>
-                    <h2><i>Ajodhya Hills</i></h2>
-                    <a href="img/sg/trip/Ayodha/3.JPG">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/Ayodha/4.JPG" alt="Image" />
-                  <figcaption>
-                    <h2><i>Ajodhya Hills</i></h2>
-                    <a href="img/sg/trip/Ayodha/4.JPG">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/Ayodha/5.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Ajodhya Hills</i></h2>
-                    <a href="img/sg/trip/Ayodha/5.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/Ayodha/6.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Ajodhya Hills</i></h2>
-                    <a href="img/sg/trip/Ayodha/6.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/Ayodha/7.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Ajodhya Hills</i></h2>
-                    <a href="img/sg/trip/Ayodha/7.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/Ayodha/8.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Ajodhya Hills</i></h2>
-                    <a href="img/sg/trip/Ayodha/8.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/Ayodha/9.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Ajodhya Hills</i></h2>
-                    <a href="img/sg/trip/Ayodha/9.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/Ayodha/10.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Ajodhya Hills</i></h2>
-                    <a href="img/sg/trip/Ayodha/10.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/Ayodha/11.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Ajodhya Hills</i></h2>
-                    <a href="img/sg/trip/Ayodha/11.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/Ayodha/12.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Ajodhya Hills</i></h2>
-                    <a href="img/sg/trip/Ayodha/12.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/TajPur/1.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Tajpur</i></h2>
-                    <a href="img/sg/trip/TajPur/1.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/TajPur/2.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Tajpur</i></h2>
-                    <a href="img/sg/trip/TajPur/2.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/TajPur/3.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Tajpur</i></h2>
-                    <a href="img/sg/trip/TajPur/3.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/TajPur/4.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Tajpur</i></h2>
-                    <a href="img/sg/trip/TajPur/4.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/TajPur/5.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Tajpur</i></h2>
-                    <a href="img/sg/trip/TajPur/5.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/TajPur/6.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Tajpur</i></h2>
-                    <a href="img/sg/trip/TajPur/6.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/TajPur/7.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Tajpur</i></h2>
-                    <a href="img/sg/trip/TajPur/7.jpg">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-honey tm-gallery-item tdiary">
-                  <img src="img/sg/trip/TajPur/8.jpg" alt="Image" />
-                  <figcaption>
-                    <h2><i>Tajpur</i></h2>
-                    <a href="img/sg/trip/TajPur/8.jpg">View more</a>
-                  </figcaption>
-                </figure>
-              </div>
-              <div style="width: 100%; margin-top: 20px">
-                <div>
-                  <iframe
-                    width="100%"
-                    height="315px"
-                    src="https://www.youtube.com/embed/CupYXdO6JsA"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-                                picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+
+              <div id="content">
+                <div class="tm-gallery">
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/2.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/2.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/3.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/3.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/4.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/4.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/5.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/5.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/1.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/1.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/6.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/6.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/7.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/7.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/8.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/8.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/9.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/9.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/10.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/10.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/11.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/11.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/12.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/12.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/13.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/13.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/14.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/14.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/15.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/15.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/16.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/16.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item colleged">
+                    <img src="img/sg/norm/17.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>College Days</i></h2>
+                      <a href="img/sg/norm/17.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf portrait">
+                    <img src="img/sg/norm/18.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/18.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf portrait">
+                    <img src="img/sg/norm/19.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/19.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/20.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/20.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/21.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/21.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf portrait">
+                    <img src="img/sg/norm/22.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/22.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/23.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/23.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/24.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/24.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/25.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/25.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/26.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/26.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/27.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/27.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/28.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/28.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/29.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/29.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/30.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/30.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/31.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/31.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/32.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/32.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf portrait">
+                    <img src="img/sg/norm/33.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/33.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf portrait">
+                    <img src="img/sg/norm/34.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/34.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item fndf">
+                    <img src="img/sg/norm/35.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Family & Friends</i></h2>
+                      <a href="img/sg/norm/35.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/Ayodha/1.JPG" alt="Image" />
+                    <figcaption>
+                      <h2><i>Ajodhya Hills</i></h2>
+                      <a href="img/sg/trip/Ayodha/1.JPG">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/Ayodha/2.JPG" alt="Image" />
+                    <figcaption>
+                      <h2><i>Ajodhya Hills</i></h2>
+                      <a href="img/sg/trip/Ayodha/2.JPG">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/Ayodha/3.JPG" alt="Image" />
+                    <figcaption>
+                      <h2><i>Ajodhya Hills</i></h2>
+                      <a href="img/sg/trip/Ayodha/3.JPG">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/Ayodha/4.JPG" alt="Image" />
+                    <figcaption>
+                      <h2><i>Ajodhya Hills</i></h2>
+                      <a href="img/sg/trip/Ayodha/4.JPG">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/Ayodha/5.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Ajodhya Hills</i></h2>
+                      <a href="img/sg/trip/Ayodha/5.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/Ayodha/6.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Ajodhya Hills</i></h2>
+                      <a href="img/sg/trip/Ayodha/6.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/Ayodha/7.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Ajodhya Hills</i></h2>
+                      <a href="img/sg/trip/Ayodha/7.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/Ayodha/8.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Ajodhya Hills</i></h2>
+                      <a href="img/sg/trip/Ayodha/8.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/Ayodha/9.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Ajodhya Hills</i></h2>
+                      <a href="img/sg/trip/Ayodha/9.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/Ayodha/10.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Ajodhya Hills</i></h2>
+                      <a href="img/sg/trip/Ayodha/10.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/Ayodha/11.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Ajodhya Hills</i></h2>
+                      <a href="img/sg/trip/Ayodha/11.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/Ayodha/12.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Ajodhya Hills</i></h2>
+                      <a href="img/sg/trip/Ayodha/12.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/TajPur/1.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Tajpur</i></h2>
+                      <a href="img/sg/trip/TajPur/1.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/TajPur/2.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Tajpur</i></h2>
+                      <a href="img/sg/trip/TajPur/2.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/TajPur/3.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Tajpur</i></h2>
+                      <a href="img/sg/trip/TajPur/3.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/TajPur/4.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Tajpur</i></h2>
+                      <a href="img/sg/trip/TajPur/4.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/TajPur/5.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Tajpur</i></h2>
+                      <a href="img/sg/trip/TajPur/5.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/TajPur/6.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Tajpur</i></h2>
+                      <a href="img/sg/trip/TajPur/6.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/TajPur/7.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Tajpur</i></h2>
+                      <a href="img/sg/trip/TajPur/7.jpg">View more</a>
+                    </figcaption>
+                  </figure>
+                  <figure class="effect-honey tm-gallery-item tdiary">
+                    <img src="img/sg/trip/TajPur/8.jpg" alt="Image" />
+                    <figcaption>
+                      <h2><i>Tajpur</i></h2>
+                      <a href="img/sg/trip/TajPur/8.jpg">View more</a>
+                    </figcaption>
+                  </figure>
                 </div>
-                <br />
-                <video controls style="width: 100%">
-                  <source src="img/sg/trip/TajPur/vid.mp4" type="video/mp4" />
-                </video>
+                <div style="width: 100%; margin-top: 20px">
+                  <div>
+                    <iframe
+                      width="100%"
+                      height="315px"
+                      src="https://www.youtube.com/embed/CupYXdO6JsA"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                                picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <br />
+                  <video controls style="width: 100%">
+                    <source src="img/sg/trip/TajPur/vid.mp4" type="video/mp4" />
+                  </video>
+                </div>
               </div>
             </section>
           </div>
@@ -713,5 +788,107 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="js/templatemo-script.js"></script>
+    <script>
+      async function checkPass() {
+        const enteredPass = document.getElementById("gpass").value;
+
+        try {
+          const response = await fetch("../../keys.json");
+          const data = await response.json();
+
+          if (enteredPass === data.Gpass) {
+            const expiryDate = new Date();
+            expiryDate.setDate(expiryDate.getDate() + 7);
+            const passData = {
+              pass: enteredPass,
+              expiry: expiryDate.getTime(),
+            };
+
+            localStorage.setItem("_gpass", JSON.stringify(passData));
+
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("content").style.display = "block";
+            document.getElementById("content").style.filter = "blur(0px)";
+          } else {
+            alert("Incorrect Pass! Try again.");
+          }
+        } catch (error) {
+          console.error("Error fetching pass:", error);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const storedPassData = localStorage.getItem("_gpass");
+        const useru = GetCookie("_dfunc");
+
+        function isValid(value) {
+          return value !== null && value !== undefined && value.trim() !== "";
+        }
+
+        if (storedPassData) {
+          const passObject = JSON.parse(storedPassData);
+          const currentTime = new Date().getTime();
+
+          if (currentTime < passObject.expiry) {
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("content").style.display = "block";
+            document.getElementById("content").style.filter = "blur(0px)";
+            return;
+          } else {
+            localStorage.removeItem("_gpass");
+          }
+        }
+
+        if (isValid(useru)) {
+          document.getElementById("overlay").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          document.getElementById("content").style.filter = "blur(0px)";
+        }
+      });
+
+      function GetCookie(name) {
+        const cookies = document.cookie.split("; ");
+        for (let cookie of cookies) {
+          const [key, value] = cookie.split("=");
+          if (key === name) {
+            return decodeURIComponent(value);
+          }
+        }
+        return null;
+      }
+
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+      document.addEventListener("keydown", (event) => {
+        if (
+          (event.ctrlKey &&
+            (event.key === "u" ||
+              event.key === "U" ||
+              event.key === "s" ||
+              event.key === "S" ||
+              event.key === "i" ||
+              event.key === "I" ||
+              event.key === "j" ||
+              event.key === "J")) ||
+          event.key === "F12"
+        ) {
+          event.preventDefault();
+        }
+      });
+
+      setInterval(() => {
+        function detectDevTools() {
+          if (
+            window.outerWidth - window.innerWidth > 200 ||
+            window.outerHeight - window.innerHeight > 200
+          ) {
+            document.body.innerHTML =
+              "<div style='padding:40px;'><h1>Ouch! Developer tools are not allowed.</h1><p>We appreciate your understanding and cooperation in keeping things secure and fair for everyone. Thanks for being awesome! 🚀✨ | www.Soubhikdas.in</p></div>";
+          }
+        }
+        detectDevTools();
+      }, 1000);
+    </script>
   </body>
 </html>

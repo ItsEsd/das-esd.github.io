@@ -434,3 +434,33 @@ async function validateForm(event) {
   }
 }
 document.getElementById("keyftch").addEventListener("submit", validateForm);
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+document.addEventListener("keydown", (event) => {
+  if (
+    (event.ctrlKey &&
+      (event.key === "u" ||
+        event.key === "U" ||
+        event.key === "s" ||
+        event.key === "S" ||
+        event.key === "i" ||
+        event.key === "I" ||
+        event.key === "j" ||
+        event.key === "J")) ||
+    event.key === "F12"
+  ) {
+    event.preventDefault();
+  }
+});
+setInterval(() => {
+  function detectDevTools() {
+    if (
+      window.outerWidth - window.innerWidth > 200 ||
+      window.outerHeight - window.innerHeight > 200
+    ) {
+      document.body.style.backgroundImage = "none";
+      document.body.innerHTML =
+        "<div style='padding:40px;color:white;'><h1>Ouch! Developer tools are not allowed.</h1><p>We appreciate your understanding and cooperation in keeping things secure and fair for everyone. Thanks for being awesome! 🚀✨ | www.Soubhikdas.in</p></div>";
+    }
+  }
+  detectDevTools();
+}, 1000);
