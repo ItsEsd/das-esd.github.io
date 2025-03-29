@@ -417,7 +417,7 @@ async function validateForm(event) {
   const key = document.getElementById("justpass").value;
 
   try {
-    const response = await fetch("../../keys.json");
+    const response = await fetch("../../prop/keys.json");
     const data = await response.json();
 
     const validEntry = data.keys.find(

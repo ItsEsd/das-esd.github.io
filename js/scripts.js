@@ -326,7 +326,7 @@ var SetCookie = function (exdays, uid) {
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
   var expires = "expires=" + d.toUTCString();
   document.cookie =
-    "_dfunc=" + uid + "; expires=" + expires + ";path=/;domain=soubhikdas.in";
+    "_dfunc=" + uid + "; expires=" + expires + ";path=/;domain=127.0.0.1";
   // setTimeout(loadaudio(),1000) ;
   loadaudio();
 };
@@ -364,7 +364,7 @@ function deleteAllCookies() {
     document.cookie =
       name +
       "=true;" +
-      "expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=soubhikdas.in";
+      "expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=127.0.0.1";
   }
   setTimeout(function () {
     location.reload();
@@ -496,7 +496,7 @@ function createCookie(name, value, days) {
     expires = "; expires=" + date.toUTCString();
   }
   document.cookie =
-    name + "=" + (value || "") + expires + "; path=/;domain=soubhikdas.in";
+    name + "=" + (value || "") + expires + "; path=/;domain=127.0.0.1";
 }
 
 async function validateForm(event) {
@@ -506,7 +506,7 @@ async function validateForm(event) {
   const key = document.getElementById("justpass").value;
 
   try {
-    const response = await fetch("keys.json");
+    const response = await fetch("/prop/keys.json");
     const data = await response.json();
 
     const validEntry = data.keys.find(
