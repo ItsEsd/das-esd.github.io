@@ -325,7 +325,9 @@ function createPlaylist() {
     trackElement.className = "playlist-item";
     trackElement.onclick = () => {
       loadTrack(index);
+      track_index = index;
       playTrack();
+      toggleplaylist();
     };
     const trackImage = document.createElement("img");
     trackImage.src = track.image;
