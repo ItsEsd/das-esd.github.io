@@ -203,9 +203,6 @@ function loadTrack(track_index) {
   now_playing.textContent =
     "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
-  var currentTrack = track_list[track_index];
-  var shareURL = `?record_studio=${currentTrack.name.replace(/\s+/g, "-")}`;
-  history.replaceState(null, "", shareURL);
   updateTimer = setInterval(seekUpdate, 1000);
   curr_track.removeEventListener("ended", nextOrRepeatTrack); // Ensure no duplicate listeners
   curr_track.addEventListener("ended", nextOrRepeatTrack);
@@ -329,7 +326,6 @@ function createPlaylist() {
     trackElement.onclick = () => {
       loadTrack(index);
       playTrack();
-      toggleplaylist();
     };
     const trackImage = document.createElement("img");
     trackImage.src = track.image;
@@ -358,7 +354,11 @@ function createPlaylist() {
 window.onload = createPlaylist;
 
 function sharethis() {
-  const shareURL = window.location.href;
+  const currentTrack = track_list[track_index];
+  const shareURL = `https://soubhikdas.in/audios/?record_studio=${currentTrack.name.replace(
+    /\s+/g,
+    "-"
+  )}`;
 
   navigator.clipboard
     .writeText(shareURL)
