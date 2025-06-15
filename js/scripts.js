@@ -83,7 +83,7 @@
     width: 100vw;
     height: 100vh;
     background: #000000dd;
-    z-index: 9999;
+    z-index: 999999;
     display: none;
     flex-direction: column;
   `;
@@ -91,7 +91,7 @@
   const closeBtn = document.createElement("button");
   closeBtn.textContent = "✕";
   closeBtn.style.cssText = `
-    background:rgba(62, 165, 255, 0.41);
+    background:rgb(42, 151, 247,0.46);
     color: white;
     padding: 4px 10px;
     font-size: 12px;
@@ -122,14 +122,14 @@
   iframeDiv.appendChild(iframe);
   document.body.appendChild(iframeDiv);
 
-  // Toggle functionality
   document.getElementById("sectmitra").addEventListener("click", () => {
-    iframeDiv.style.display =
-      iframeDiv.style.display === "none" || iframeDiv.style.display === ""
-        ? "flex"
-        : "none";
+    const isHidden =
+      iframeDiv.style.display === "none" || iframeDiv.style.display === "";
+
+    iframeDiv.style.display = isHidden ? "flex" : "none";
   });
-})(jQuery); // End of use strict
+})(jQuery);
+// End of use strict
 
 ////////////////////////////////////////////
 
@@ -579,5 +579,23 @@ async function validateForm(event) {
     console.error("Error fetching JSON:", error);
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const iframes = document.querySelectorAll("iframe");
+
+  iframes.forEach((iframe) => {
+    iframe.addEventListener("load", () => {
+      try {
+        const iframeDoc =
+          iframe.contentDocument || iframe.contentWindow.document;
+        iframeDoc.addEventListener("contextmenu", function (e) {
+          e.preventDefault();
+        });
+      } catch (err) {
+        console.warn("Cross-origin iframe: cannot access iframe content", err);
+      }
+    });
+  });
+});
 
 document.getElementById("inlivefrm").addEventListener("submit", validateForm);

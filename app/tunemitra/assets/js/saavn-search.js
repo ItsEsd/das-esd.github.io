@@ -47,7 +47,7 @@ function nextPage() {
   doSaavnSearch(query, 0, true);
 }
 
-async function doSaavnSearch(query, NotScroll, page) {
+async function doSaavnSearch(query, page) {
   document.getElementById("loadmore").textContent = "Loading..";
   window.location.hash = query;
   document.querySelector("#saavn-search-box").value = decodeURIComponent(query);
@@ -76,9 +76,6 @@ async function doSaavnSearch(query, NotScroll, page) {
       throw new Error(json.message || "Unknown error occurred");
     }
     var results = json.data.results;
-    console.log(results);
-    var results = json.data.results;
-
     for (let i = results.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [results[i], results[j]] = [results[j], results[i]];
@@ -187,13 +184,13 @@ function PlayAudio(audio_url, song_id) {
   if (promise) {
     promise.catch(function (error) {
       console.error(error);
-      alert("Error loading audio. Please try again.");
+      // alert("Error loading audio. Please try again.");
     });
   }
 
   audio.play().catch(function (error) {
     console.error(error);
-    alert("Error playing audio. Please try again.");
+    // alert("Error playing audio. Please try again.");
   });
 
   updatePlayPauseButton(true);
@@ -243,7 +240,7 @@ function togglePlayPause() {
   if (audio.paused) {
     audio.play().catch(function (error) {
       console.error(error);
-      alert("Error playing audio. Please try again.");
+      // alert("Error playing audio. Please try again.");
     });
     updatePlayPauseButton(true);
   } else {
@@ -376,3 +373,6 @@ document
     document.getElementById("saavn-bitrate").value = this.value;
     doSaavnSearch(lastsearch);
   });
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
