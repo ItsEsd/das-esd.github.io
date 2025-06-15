@@ -132,6 +132,7 @@
 }
 #onaudio {
   cursor: pointer;
+  padding-top: 2px;
   font-size: 14px;
   float: right;
 }
@@ -555,6 +556,7 @@ h3 a:hover {
 }
 
 #sectmitra a {
+  padding-top: 2px;
   font-size: 15px;
   cursor: pointer;
   color: #0878da;

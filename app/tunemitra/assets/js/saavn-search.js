@@ -143,14 +143,19 @@ function displayResults(results) {
   results_container.innerHTML += resultsHTML;
 
   document.querySelectorAll(".video-container").forEach((container) => {
-    container.addEventListener("click", function (e) {
-      const songId = this.dataset.songId;
+    const songId = container.dataset.songId;
+    if (!results.includes(songId)) {
+      playQueue.push(songId);
+    }
+
+    container.addEventListener("click", function () {
       const downloadUrl = this.dataset.downloadUrl;
       PlayAudio(downloadUrl, songId);
     });
   });
 }
-
+let playQueue = [];
+let currentSongIndex = -1;
 function TextAbstract(text, length) {
   if (text == null) {
     return "";
@@ -167,6 +172,7 @@ function TextAbstract(text, length) {
 function PlayAudio(audio_url, song_id) {
   var source = document.getElementById("audioSource");
   source.src = audio_url;
+
   var track = results_objects[song_id].track;
   var name = track.name;
   var album = track.album.name;
@@ -184,10 +190,12 @@ function PlayAudio(audio_url, song_id) {
       alert("Error loading audio. Please try again.");
     });
   }
+
   audio.play().catch(function (error) {
     console.error(error);
     alert("Error playing audio. Please try again.");
   });
+
   updatePlayPauseButton(true);
 
   if (slowedReverbEnabled) {
@@ -195,6 +203,22 @@ function PlayAudio(audio_url, song_id) {
   } else {
     removeSlowedReverbEffect();
   }
+
+  currentSongIndex = playQueue.indexOf(song_id);
+
+  audio.addEventListener("ended", function () {
+    if (currentSongIndex + 1 < playQueue.length) {
+      currentSongIndex++;
+      const nextSongId = playQueue[currentSongIndex];
+      const nextUrl = document.querySelector(
+        `.video-container[data-song-id="${nextSongId}"]`
+      ).dataset.downloadUrl;
+
+      PlayAudio(nextUrl, nextSongId);
+    } else {
+      updatePlayPauseButton(false);
+    }
+  });
 }
 
 document.getElementById("loadmore").addEventListener("click", nextPage);
