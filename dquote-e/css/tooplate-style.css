@@ -555,21 +555,22 @@ footer .dash-line {
 /* ////////// Quote post //////////// */
 #openModalBtn {
   z-index: 100;
-  bottom: 70px;
-  right: 20px;
+  bottom: 75px;
+  right: 25px;
   position: fixed;
   outline: none;
   border: 0px;
-  background-color: #181818;
+  background-color: transparent;
   border-radius: 5px;
-  width: 42px;
-  height: 42px;
-  padding: 2px;
+  width: 56px;
+  height: 56px;
 }
 #openModalBtn svg {
-  width: 30px;
-  height: 30px;
+  width: 55px;
+  height: 55px;
   color: white;
+  background-color: #f2f2f2;
+  border-radius: 50%;
 }
 .modalcn {
   display: none;
