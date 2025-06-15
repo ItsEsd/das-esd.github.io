@@ -47,7 +47,7 @@ function nextPage() {
   doSaavnSearch(query, 0, true);
 }
 
-async function doSaavnSearch(query, page) {
+async function doSaavnSearch(query, NotScroll, page) {
   document.getElementById("loadmore").textContent = "Loading..";
   window.location.hash = query;
   document.querySelector("#saavn-search-box").value = decodeURIComponent(query);
@@ -176,8 +176,16 @@ function PlayAudio(audio_url, song_id) {
   var image = track.image[2].link;
 
   document.title = name + " - " + album;
-  document.getElementById("player-name").textContent = name;
-  document.getElementById("player-album").textContent = album;
+  function trimTextIfSmallScreen(text) {
+    if (window.innerWidth < 600) {
+      return text.length > 20 ? text.slice(0, 11) + "..." : text;
+    }
+    return text;
+  }
+  document.getElementById("player-name").textContent =
+    trimTextIfSmallScreen(name);
+  document.getElementById("player-album").textContent =
+    trimTextIfSmallScreen(album);
   document.getElementById("player-image").src = image;
 
   var promise = audio.load();
