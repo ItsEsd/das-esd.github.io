@@ -132,6 +132,8 @@
 }
 #onaudio {
   cursor: pointer;
+  font-size: 14px;
+  float: right;
 }
 
 #clsaud {
@@ -452,6 +454,7 @@ h3 a:hover {
   padding: 10px;
   font-size: 16px;
   z-index: 1;
+  display: block;
 }
 /* Define the keyframes for the spin animation */
 @keyframes spin {
@@ -490,7 +493,6 @@ h3 a:hover {
   width: 100%;
   height: 500px;
   border: 0px;
-  padding: 10px;
 }
 #fetchpsty hr {
   width: 100%;
@@ -500,7 +502,7 @@ h3 a:hover {
 #dqtfrm {
   border: 0px;
   width: 100%;
-  height: 600px;
+  height: calc(100vh - 51.8px);
   overflow-y: auto;
   padding: 0px;
   margin: 0px;
@@ -545,10 +547,20 @@ h3 a:hover {
 }
 #sectutor a {
   cursor: pointer;
-  color: #c50f0f;
+  color: #f61b1b;
 }
 
 #sectutor a:hover {
+  text-decoration: underline;
+}
+
+#sectmitra a {
+  font-size: 15px;
+  cursor: pointer;
+  color: #0878da;
+}
+
+#sectmitra a:hover {
   text-decoration: underline;
 }
 

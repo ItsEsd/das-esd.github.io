@@ -72,6 +72,63 @@
       document.getElementById("clcnas").innerHTML = " >> ";
     }
   });
+
+  // Create and append the full-screen div with iframe and close button
+  const iframeDiv = document.createElement("div");
+  iframeDiv.id = "iframeFullScreen";
+  iframeDiv.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000dd;
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+  `;
+
+  const closeBtn = document.createElement("button");
+  closeBtn.textContent = "✕";
+  closeBtn.style.cssText = `
+    background:rgba(62, 165, 255, 0.41);
+    color: white;
+    padding: 4px 10px;
+    font-size: 12px;
+    border: none;
+    top:10px;
+    right:10px;
+    position:fixed;
+    align-self: flex-end;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10000;
+  `;
+
+  const iframe = document.createElement("iframe");
+  iframe.src = "../app/tunemitra/#instrumental";
+  iframe.style.cssText = `
+    flex: 1;
+    width: 100vw;
+    height: 100vh;
+    border: none;
+  `;
+
+  closeBtn.addEventListener("click", () => {
+    iframeDiv.style.display = "none";
+  });
+
+  iframeDiv.appendChild(closeBtn);
+  iframeDiv.appendChild(iframe);
+  document.body.appendChild(iframeDiv);
+
+  // Toggle functionality
+  document.getElementById("sectmitra").addEventListener("click", () => {
+    iframeDiv.style.display =
+      iframeDiv.style.display === "none" || iframeDiv.style.display === ""
+        ? "flex"
+        : "none";
+  });
 })(jQuery); // End of use strict
 
 ////////////////////////////////////////////
@@ -393,6 +450,7 @@ if (ewf_expire) {
 }
 
 $(document).ready(function loadartpst() {
+  document.getElementById("dqtfrm").src = "../../dquote-e/";
   document.getElementById("mvntartcon").classList.add("loading-spin");
   var ur1 = "https://script.google.com/macros/s/";
   var ur2 =
@@ -413,7 +471,6 @@ $(document).ready(function loadartpst() {
 function inrd(e) {
   if (e.records != "") {
     var elem = document.createElement("div");
-    var elem2 = document.getElementById("fetchpsty");
     elem.id = "mynote";
     elem.innerHTML =
       '<div id="opnote">' +
@@ -423,7 +480,6 @@ function inrd(e) {
     document.getElementById("shwmnote").style.display = "block";
     document.getElementById("mvntartcon").classList.remove("loading-spin");
   }
-  elem2.innerHTML = e.record2;
   document.getElementById("sectutor").style.display = "block";
   document.getElementById("sectutor").addEventListener("click", function () {
     var newDiv = document.createElement("div");

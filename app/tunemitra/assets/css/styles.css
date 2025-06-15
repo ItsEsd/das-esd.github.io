@@ -1,0 +1,92 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0a0a0a;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #18181b;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+  border-radius: 4px;
+}
+header {
+  background: #4e4e4ea9 !important;
+}
+@media (max-width: 640px) {
+  .mobile-search {
+    order: 1;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-search,
+  #mobile-saavn-bitrate {
+    margin-top: 0.5rem;
+  }
+
+  .lofi-toggle {
+    display: flex !important;
+    margin-top: 0.5rem;
+  }
+
+  .search-query-container {
+    display: none;
+  }
+
+  .header-container {
+    max-height: 160px;
+    overflow-y: auto;
+  }
+}
+
+.search-query-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 8px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.search-query-container::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+.search-query-button {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: #374151;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-query-button:hover {
+  background-color: #4b5563;
+}
+
+.lofi-toggle.active {
+  background-color: #3ea6ff;
+}
+footer {
+  z-index: 1000 !important;
+}
+main {
+  z-index: 0 !important;
+}
