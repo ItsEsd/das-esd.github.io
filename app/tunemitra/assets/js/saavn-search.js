@@ -353,7 +353,7 @@ function removeSlowedReverbEffect() {
 if (window.location.hash) {
   doSaavnSearch(window.location.hash.substring(1));
 } else {
-  doSaavnSearch("hindi", 1);
+  doSaavnSearch("Indian Fusion", 1);
 }
 
 // Handle hash change
