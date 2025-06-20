@@ -81,13 +81,12 @@ let lastScrollTop = scrollContainer.scrollTop;
 scrollContainer.addEventListener("scroll", function () {
   const currentScroll = scrollContainer.scrollTop;
 
-  // Scrolling down
   if (currentScroll > lastScrollTop) {
-    arthead.style.display = "none";
-  }
-  // Scrolling up by 100px or more
-  else if (lastScrollTop - currentScroll > 100 || currentScroll <= 0) {
-    arthead.style.display = "block";
+    // Scrolling down
+    arthead.style.transform = "translateY(-100%)";
+  } else if (lastScrollTop - currentScroll > 40 || currentScroll <= 0) {
+    // Scrolling up
+    arthead.style.transform = "translateY(0)";
   }
 
   lastScrollTop = currentScroll;

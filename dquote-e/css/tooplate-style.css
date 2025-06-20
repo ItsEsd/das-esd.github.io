@@ -629,6 +629,7 @@ footer .dash-line {
   z-index: 1;
   text-align: right;
   transition: all 0.3s ease;
+  will-change: transform;
 }
 /* Define the keyframes for the spin animation */
 @keyframes spin {
