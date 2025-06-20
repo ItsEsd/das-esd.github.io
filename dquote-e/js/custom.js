@@ -111,8 +111,10 @@ $(document).ready(function loadartpst() {
   });
 
   $(".rfrshpst").click(function () {
-    loadartpst(); // re-run fetch
-    $("#fetchpsty").empty(); // clear content
+    const oldBtn = document.getElementById("loadMoreBtn");
+    if (oldBtn) oldBtn.remove();
+    loadartpst();
+    $("#fetchpsty").empty();
     document.getElementById("fetchpsty").innerHTML =
       "<div style='display:flex;justify-content:center;align-items:center;height:80vh;'><p>Loading ..</p></div>";
   });
