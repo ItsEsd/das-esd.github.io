@@ -20,7 +20,7 @@ setTimeout(() => {
   sideMenu.classList.add("resize");
   content.classList.add("resize");
   toggleMenu.classList.add("active");
-  bar.classList.add("anim-bar");
+  bars.classList.add("anim-bar");
 }, 1000);
 
 menuItems.forEach(function (item) {
