@@ -39,14 +39,7 @@
 // Callback function must be global
 function inrd(e) {
   if (e.records != "") {
-    var elem = document.createElement("div");
     var elem2 = document.getElementById("fetchpsty");
-    elem.id = "mynote";
-    elem.innerHTML =
-      '<div id="opnote">' +
-      e.record1 +
-      '</div><div id="clsmynt" onclick="showntbtn(this);">CLOSE</div>';
-    document.getElementById("about").appendChild(elem);
     document.getElementById("mvntartcon").classList.remove("loading-spin");
 
     // Only set this after removing the spinner
@@ -55,6 +48,9 @@ function inrd(e) {
 }
 
 $(document).ready(function loadartpst() {
+  document.getElementById("fetchpsty").innerHTML =
+    "<div style='display:flex;justify-content:center;align-items:center;height:80vh;'><p>Loading ..</p></div>";
+
   document.getElementById("mvntartcon").classList.add("loading-spin");
   var ur1 = "https://script.google.com/macros/s/";
   var ur2 =
@@ -73,7 +69,7 @@ $(document).ready(function loadartpst() {
     $("#fetchpsty").empty(); // clear content
 
     document.getElementById("fetchpsty").innerHTML =
-      "<p style='padding:40px;'>Loading ..</p>";
+      "<div style='display:flex;justify-content:center;align-items:center;height:80vh;'><p>Loading ..</p></div>";
   });
 });
 
