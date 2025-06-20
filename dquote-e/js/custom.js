@@ -43,20 +43,39 @@ const increment = 10;
 function inrd(e) {
   if (e.record2 && e.record2.trim() !== "") {
     document.getElementById("mvntartcon").classList.remove("loading-spin");
-    allRecords = e.record2.split(/<hr\s*\/?>/i).filter((r) => r.trim() !== "");
+
+    // Convert <img src="..."> → <img data-src="...">
+    const sanitizedRecords = e.record2
+      .split(/<hr\s*\/?>/i)
+      .filter((r) => r.trim() !== "")
+      .map((html) =>
+        html
+          .replace(
+            /<img\s+([^>]*?)src=["']([^"']+)["']/gi,
+            '<img $1data-src="$2" class="lazy-img"'
+          )
+          // Optional: force links to open in new tab
+          .replace(/<a\s+([^>]*?)>/gi, '<a $1 target="_blank">')
+      );
+
+    allRecords = sanitizedRecords;
     displayCount = 0;
+
     const container = document.getElementById("fetchpsty");
-    container.innerHTML = "";
-    container.innerHTML = "<base target='_blank'>";
+    container.innerHTML = ""; // ✅ Reset content
+
     const oldBtn = document.getElementById("loadMoreBtn");
     if (oldBtn) oldBtn.remove();
+
     const loadMoreBtn = document.createElement("button");
     loadMoreBtn.id = "loadMoreBtn";
     loadMoreBtn.textContent = "Load More";
     loadMoreBtn.style.display = "none";
     loadMoreBtn.addEventListener("click", showNextRecords);
     container.after(loadMoreBtn);
+
     showNextRecords();
+    observeLazyImages();
   }
 }
 
@@ -73,6 +92,7 @@ function showNextRecords() {
   displayCount = end;
   const btn = document.getElementById("loadMoreBtn");
   btn.style.display = displayCount < allRecords.length ? "block" : "none";
+  observeLazyImages();
 }
 
 $(document).ready(function loadartpst() {
@@ -172,4 +192,27 @@ function showFullscreenImage(src) {
 
   // Set image src
   document.getElementById("fullscreenImage").src = src;
+}
+
+function observeLazyImages() {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.onload = () => img.classList.add("loaded"); // trigger fade-in
+          obs.unobserve(img);
+        }
+      });
+    },
+    {
+      rootMargin: "200px 0px", // preload a bit before visible
+      threshold: 0.1,
+    }
+  );
+
+  document.querySelectorAll("img.lazy-img:not([src])").forEach((img) => {
+    observer.observe(img);
+  });
 }

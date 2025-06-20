@@ -710,3 +710,11 @@ footer .dash-line {
 #loadMoreBtn:hover {
   opacity: 0.8;
 }
+img.lazy-img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+img.lazy-img.loaded {
+  opacity: 1;
+}
