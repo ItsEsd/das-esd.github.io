@@ -334,8 +334,9 @@ h3 a:hover {
   max-width: 750px;
   overflow-y: auto;
   background-color: white;
-  height: 95vh;
+  height: calc(100vh - 30px);
 }
+
 #clsprmcn {
   max-width: 750px;
   bottom: 0;
