@@ -648,8 +648,8 @@ footer .dash-line {
 
 #fetchpsty {
   padding: 10px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #f1f1f1;
+  /* margin-bottom: 20px; */
+  /* border-bottom: 1px solid #f1f1f1; */
   font-family: "Courier New", Courier, monospace;
   word-wrap: break-word !important;
 }
@@ -697,4 +697,16 @@ footer .dash-line {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+#loadMoreBtn {
+  color: white;
+  border: none;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  background-color: #666666;
+}
+#loadMoreBtn:hover {
+  opacity: 0.8;
 }
