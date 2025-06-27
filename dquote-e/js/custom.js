@@ -317,11 +317,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const img = e.target;
       const clickX = e.clientX;
       const clickY = e.clientY;
-      const menuWidth = 180;
+      const menuWidth = 215;
       const menuHeight = menuOptions.length * 36;
 
-      const maxLeft = window.innerWidth - menuWidth - 10;
-      const maxTop = window.innerHeight - menuHeight - 10;
+      const maxLeft = window.innerWidth - menuWidth - 15;
+      const maxTop = window.innerHeight - menuHeight - 15;
 
       const left = Math.min(clickX, maxLeft);
       const top = Math.min(clickY, maxTop);
