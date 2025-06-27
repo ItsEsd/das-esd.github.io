@@ -223,7 +223,9 @@ function observeLazyImages() {
 }
 
 document.addEventListener("contextmenu", function (event) {
-  event.preventDefault();
+  if (event.target.tagName !== "IMG") {
+    event.preventDefault();
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -232,14 +234,13 @@ document.addEventListener("DOMContentLoaded", () => {
   toolbar.className = "image-toolbar";
   document.body.appendChild(toolbar);
 
-  // Actions
   const menuOptions = [
     {
       label: "Open Image in New Tab",
       action: (img) => window.open(img.src, "_blank"),
     },
     {
-      label: "Copy Image",
+      label: "🖼️ Copy Image",
       action: async (img) => {
         try {
           const canvas = document.createElement("canvas");
@@ -261,14 +262,14 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
     {
-      label: "Copy Image Address",
+      label: "🔗 Copy Image Address",
       action: (img) => {
         navigator.clipboard.writeText(img.src);
         alert("Image address copied");
       },
     },
     {
-      label: "Share",
+      label: "-- Share ↝",
       action: (img) => {
         if (navigator.share) {
           navigator
