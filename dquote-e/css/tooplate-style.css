@@ -718,3 +718,61 @@ img.lazy-img {
 img.lazy-img.loaded {
   opacity: 1;
 }
+
+.image-toolbar {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 999999999;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  width: 200px;
+}
+.image-toolbar button {
+  background: none;
+  border: none;
+  padding: 6px 12px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+.image-toolbar button:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+.image-action-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 9998;
+  display: none;
+}
+
+.image-toolbar .dismsimgop {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  line-height: 0.5;
+  cursor: pointer;
+  color: #f31b1b;
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  font-weight: bold;
+  user-select: none;
+}

@@ -16,6 +16,7 @@ toggleMenu.addEventListener("click", () => {
     }, 1000);
   });
 });
+
 setTimeout(() => {
   sideMenu.classList.add("resize");
   content.classList.add("resize");
@@ -108,4 +109,29 @@ document.querySelectorAll("img").forEach((img) => {
     fullImage.src = img.src;
     fullscreenDiv.style.display = "flex";
   });
+});
+
+document.addEventListener("click", function (e) {
+  if (window.innerWidth < 768) {
+    const clickedOutsideMenu = !sideMenu.contains(e.target);
+    const clickedOutsideToggle = !toggleMenu.contains(e.target);
+
+    if (clickedOutsideMenu && clickedOutsideToggle) {
+      sideMenu.classList.remove("resize");
+      content.classList.remove("resize");
+      toggleMenu.classList.remove("active");
+    }
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 768) {
+    sideMenu.classList.remove("resize");
+    content.classList.remove("resize");
+    toggleMenu.classList.remove("active");
+  } else {
+    sideMenu.classList.add("resize");
+    content.classList.add("resize");
+    toggleMenu.classList.add("active");
+  }
 });

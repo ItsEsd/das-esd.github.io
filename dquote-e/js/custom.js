@@ -180,11 +180,14 @@ function showFullscreenImage(src) {
       top: 20px;
       right: 30px;
       font-size: 30px;
-      background: none;
+      background:rgba(0, 0, 0, 0.67);
       border: none;
-      color: white;
+      color:rgba(255, 255, 255, 0.87);
       cursor: pointer;
       z-index: 10000;
+      height:50px;
+      width:50px;
+      border-radius:50%;
     `;
     closeBtn.onclick = () => overlay.remove();
     overlay.appendChild(closeBtn);
@@ -218,3 +221,127 @@ function observeLazyImages() {
     observer.observe(img);
   });
 }
+
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Create toolbar once
+  const toolbar = document.createElement("div");
+  toolbar.className = "image-toolbar";
+  document.body.appendChild(toolbar);
+
+  // Actions
+  const menuOptions = [
+    {
+      label: "Open Image in New Tab",
+      action: (img) => window.open(img.src, "_blank"),
+    },
+    {
+      label: "Copy Image",
+      action: async (img) => {
+        try {
+          const canvas = document.createElement("canvas");
+          canvas.width = img.naturalWidth;
+          canvas.height = img.naturalHeight;
+          const ctx = canvas.getContext("2d");
+          ctx.drawImage(img, 0, 0);
+          const blob = await new Promise((resolve) =>
+            canvas.toBlob(resolve, "image/png")
+          );
+          if (!blob) throw new Error("Could not convert image");
+          await navigator.clipboard.write([
+            new ClipboardItem({ "image/png": blob }),
+          ]);
+          alert("Image copied to clipboard");
+        } catch (err) {
+          alert("Copy image failed: " + err.message);
+        }
+      },
+    },
+    {
+      label: "Copy Image Address",
+      action: (img) => {
+        navigator.clipboard.writeText(img.src);
+        alert("Image address copied");
+      },
+    },
+    {
+      label: "Share",
+      action: (img) => {
+        if (navigator.share) {
+          navigator
+            .share({
+              title: "Shared Image",
+              url: img.src,
+            })
+            .catch((err) => console.log("Share failed:", err));
+        } else {
+          alert("Web Share API not supported.");
+        }
+      },
+    },
+  ];
+
+  // Create buttons inside toolbar
+  menuOptions.forEach((opt) => {
+    const btn = document.createElement("button");
+    btn.textContent = opt.label;
+    btn.addEventListener("click", () => {
+      if (toolbar.relatedImage) {
+        opt.action(toolbar.relatedImage);
+        toolbar.style.display = "none";
+      }
+    });
+    toolbar.appendChild(btn);
+  });
+
+  // Add dismiss button
+  const dismissBtn = document.createElement("button");
+  dismissBtn.className = "dismsimgop";
+  dismissBtn.textContent = "×";
+  dismissBtn.title = "Close menu";
+
+  dismissBtn.addEventListener("click", () => {
+    toolbar.style.display = "none";
+  });
+  toolbar.appendChild(dismissBtn);
+
+  // Show toolbar when any image is clicked
+  document.addEventListener("click", (e) => {
+    toolbar.style.display = "none";
+
+    if (e.target.tagName === "IMG") {
+      const img = e.target;
+      const clickX = e.clientX;
+      const clickY = e.clientY;
+      const menuWidth = 180;
+      const menuHeight = menuOptions.length * 36;
+
+      const maxLeft = window.innerWidth - menuWidth - 10;
+      const maxTop = window.innerHeight - menuHeight - 10;
+
+      const left = Math.min(clickX, maxLeft);
+      const top = Math.min(clickY, maxTop);
+
+      toolbar.style.display = "flex";
+      toolbar.style.top = `${window.scrollY + top}px`;
+      toolbar.style.left = `${window.scrollX + left}px`;
+      toolbar.relatedImage = img;
+
+      e.stopPropagation();
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!toolbar.contains(e.target) && e.target.tagName !== "IMG") {
+      toolbar.style.display = "none";
+    }
+  });
+
+  // Hide toolbar if clicking outside
+  document.addEventListener("scroll", () => {
+    toolbar.style.display = "none";
+  });
+});
