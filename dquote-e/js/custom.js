@@ -234,6 +234,76 @@ document.addEventListener("DOMContentLoaded", () => {
   toolbar.className = "image-toolbar";
   document.body.appendChild(toolbar);
 
+  // Create notification container
+  const notifyContainer = document.createElement("div");
+  notifyContainer.id = "img-notify-container";
+  document.body.appendChild(notifyContainer);
+
+  const showNotification = (message) => {
+    const note = document.createElement("div");
+    note.className = "img-notify";
+    note.textContent = message;
+    notifyContainer.appendChild(note);
+    setTimeout(() => {
+      note.style.opacity = "0";
+      setTimeout(() => note.remove(), 500);
+    }, 2000);
+  };
+
+  const copyImageByBlob = async (url) => {
+    try {
+      const res = await fetch(url, { mode: "cors" });
+      const blob = await res.blob();
+
+      if (blob.type !== "image/png") {
+        const imgBitmap = await createImageBitmap(blob);
+        const canvas = document.createElement("canvas");
+        canvas.width = imgBitmap.width;
+        canvas.height = imgBitmap.height;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(imgBitmap, 0, 0);
+
+        const pngBlob = await new Promise((resolve) =>
+          canvas.toBlob(resolve, "image/png")
+        );
+        if (!pngBlob) throw new Error("Failed to convert image to PNG");
+
+        await navigator.clipboard.write([
+          new ClipboardItem({ "image/png": pngBlob }),
+        ]);
+      } else {
+        await navigator.clipboard.write([
+          new ClipboardItem({ "image/png": blob }),
+        ]);
+      }
+
+      showNotification("🖼️ Image copied to clipboard");
+    } catch (err) {
+      const message = document.createElement("div");
+      message.className = "img-notify actionable";
+
+      const text = document.createElement("span");
+      text.textContent = "🔗 Copy failed. Click to open image in new tab.";
+      message.appendChild(text);
+
+      const openBtn = document.createElement("button");
+      openBtn.textContent = "Open";
+      openBtn.style.marginLeft = "10px";
+      openBtn.onclick = () => {
+        window.open(url, "_blank", "noopener,noreferrer");
+        message.remove();
+      };
+      message.appendChild(openBtn);
+
+      setTimeout(() => {
+        message.style.opacity = "0";
+        setTimeout(() => message.remove(), 500);
+      }, 6000);
+
+      document.getElementById("img-notify-container").appendChild(message);
+    }
+  };
+
   const menuOptions = [
     {
       label: "Open Image in New Tab",
@@ -242,30 +312,14 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       label: "🖼️ Copy Image",
       action: async (img) => {
-        try {
-          const canvas = document.createElement("canvas");
-          canvas.width = img.naturalWidth;
-          canvas.height = img.naturalHeight;
-          const ctx = canvas.getContext("2d");
-          ctx.drawImage(img, 0, 0);
-          const blob = await new Promise((resolve) =>
-            canvas.toBlob(resolve, "image/png")
-          );
-          if (!blob) throw new Error("Could not convert image");
-          await navigator.clipboard.write([
-            new ClipboardItem({ "image/png": blob }),
-          ]);
-          alert("Image copied to clipboard");
-        } catch (err) {
-          alert("Copy image failed: " + err.message);
-        }
+        await copyImageByBlob(img.src);
       },
     },
     {
       label: "🔗 Copy Image Address",
       action: (img) => {
         navigator.clipboard.writeText(img.src);
-        alert("Image address copied");
+        showNotification("🔗 Image address copied");
       },
     },
     {
@@ -277,9 +331,9 @@ document.addEventListener("DOMContentLoaded", () => {
               title: "Shared Image",
               url: img.src,
             })
-            .catch((err) => console.log("Share failed:", err));
+            .catch((err) => showNotification("Share failed: " + err.message));
         } else {
-          alert("Web Share API not supported.");
+          showNotification("Web Share API not supported.");
         }
       },
     },
@@ -341,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Hide toolbar if clicking outside
+  // Hide toolbar if scrolling
   document.addEventListener("scroll", () => {
     toolbar.style.display = "none";
   });

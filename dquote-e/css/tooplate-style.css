@@ -776,3 +776,31 @@ img.lazy-img.loaded {
   font-weight: bold;
   user-select: none;
 }
+
+#img-notify-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999999999;
+  color: #fff;
+}
+
+.img-notify {
+  background: #3b3b3b;
+  color: #fff;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease;
+}
+.img-notify button {
+  margin-left: 10px;
+  padding: 2px 8px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
