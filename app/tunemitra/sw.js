@@ -1,10 +1,5 @@
 const CACHE_NAME = "app-page-cache-tunemitra";
-const urlsToCache = [
-  "index.html",
-  "assets/css/styles.css",
-  "assets/js/saavn-search.js",
-  "logo.png",
-];
+const urlsToCache = ["index.html", "logo.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(
