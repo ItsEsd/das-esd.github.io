@@ -1,41 +1,52 @@
-var url_string = window.location.href;
-var url = new URL(url_string);
-var q = url.searchParams.get("d");
-var m = url.searchParams.get("a");
-var r = url.searchParams.get("s");
-var tostr = url.searchParams.toString();
-var fullurl = tostr.split("%22");
-var chkfltyp = fullurl[1].split(".pdf");
-if (r == "true" && chkfltyp[1] == "") {
-  $("#crtpdflk,#formContainer").hide();
-  var f_urlF = fullurl[1];
-  var f_url = unescape(f_urlF.replace("+", " "));
-  var f_meta = m;
-  document.title = f_meta + " | D's World";
-} else if (r == "true" && chkfltyp.length == 1) {
-  $("#crtpdflk,#formContainer").hide();
-  $("#objcont").show();
-  document.getElementById("objcont").innerHTML =
-    "<object data='" + unescape(chkfltyp[0]) + "' id='objfrm'></object>";
-  var f_meta = m;
-  document.title = f_meta + " | D's World";
-}
-document.addEventListener("click", function () {
-  window.open(f_url, "_blank");
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const url_string = window.location.href;
+  const url = new URL(url_string);
 
-document.addEventListener("adobe_dc_view_sdk.ready", function () {
-  var adobeDCView = new AdobeDC.View({
-    clientId: "42a6ed502ff6469caecf4c3da1fecbff",
-    divId: "adobe-dc-view",
-  });
-  adobeDCView.previewFile(
-    {
-      content: { location: { url: f_url } },
-      metaData: { fileName: f_meta },
-    },
-    {}
-  );
+  const fileParam = url.searchParams.get("d"); // PDF URL
+  const titleParam = url.searchParams.get("a"); // PDF Name
+  const showFlag = url.searchParams.get("s"); // Flag: true or false
+
+  const tostr = url.searchParams.toString();
+  const fullurl = tostr.split("%22");
+  const chkfltyp = fullurl[1] ? fullurl[1].split(".pdf") : [];
+
+  let f_url = "";
+  let f_meta = titleParam || "PDF Document";
+
+  if (showFlag === "true" && chkfltyp[1] === "") {
+    // Valid PDF
+    $("#crtpdflk,#formContainer").hide();
+    const f_urlF = fullurl[1];
+    f_url = unescape(f_urlF.replace(/\+/g, " "));
+    document.title = `${f_meta} | D's World`;
+
+    document.addEventListener("adobe_dc_view_sdk.ready", function () {
+      const adobeDCView = new AdobeDC.View({
+        clientId: "42a6ed502ff6469caecf4c3da1fecbff",
+        divId: "adobe-dc-view",
+      });
+      adobeDCView.previewFile(
+        {
+          content: { location: { url: f_url } },
+          metaData: { fileName: f_meta },
+        },
+        {}
+      );
+    });
+
+    document.body.addEventListener("click", function () {
+      window.open(f_url, "_blank");
+    });
+  } else if (showFlag === "true" && chkfltyp.length === 1) {
+    // Likely a non-PDF file or fallback
+    $("#crtpdflk,#formContainer").hide();
+    $("#objcont").show();
+    f_url = unescape(chkfltyp[0].replace(/\+/g, " "));
+    document.getElementById(
+      "objcont"
+    ).innerHTML = `<object data="${f_url}" id="objfrm"></object>`;
+    document.title = `${f_meta} | D's World`;
+  }
 });
 
 function createForm() {
