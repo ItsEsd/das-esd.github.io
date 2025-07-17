@@ -20,6 +20,12 @@ let curr_track = document.createElement("audio");
 let repeat_btn = document.querySelector(".repeat-track");
 let track_list = [
   {
+    name: "Like a River Flow",
+    artist: "Es D (Soubhik Das)",
+    image: "/audios/files/image/record_thumb.png",
+    path: "/audios/files/audio/record/Like a River Flow.m4a",
+  },
+  {
     name: "Hollow Dome হুঙ্কার",
     artist: "Es D (Soubhik Das)",
     image: "/audios/files/image/record_thumb.png",
